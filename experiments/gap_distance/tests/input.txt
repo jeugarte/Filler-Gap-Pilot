@@ -1,0 +1,672 @@
+I know that your friend gave a baguette to Mary last weekend . <eos>
+The accountant wondered that the secretary introduced a young man to her friend last night . <eos>
+The stewardess told me that the pilot sent a present to his family when we landed . <eos>
+We discovered that the witty actor told an embarrassing story about the hostess during the party . <eos>
+The neighbors found out that the young woman bought a cake for her fiancee in a rush . <eos>
+My friend knows that the successful architect built a house for her mother last year . <eos>
+The commissioner discovered that the police detective handed a wad of cash to the man in the trench coat just a few minutes ago . <eos>
+We all know that the investor lent a lot of money to his nephew after the housing market crashed . <eos>
+I know that the hapless businessman repaid his debt to the mafia kingpin when he had enough money . <eos>
+The newspaper reported that the administrator promised a good retirement plan to the factory workers during the speech . <eos>
+Her friend found out that the slimy businessman sold a broken car to the unsuspecting couple yesterday . <eos>
+I realized that the foreign visitor told a joke to the guests over dinner . <eos>
+The novel revealed that the suffering artist penned his new novel about tragic love last winter . <eos>
+We all know that the young politician said a few remarks about immigration a week before the primaries . <eos>
+I know that the young professional assembled a fancy meal for his parents last night . <eos>
+My friends all know that the businesswoman left her computer in the office this afternoon . <eos>
+The visitor said that the elderly lady described her morning routine to her friends during the card game . <eos>
+I know that the single mother called her father for advice late at night . <eos>
+The colleagues realized that the human resources officer found a spare computer charger for the intern yesterday . <eos>
+She said that the five star general awarded a medal to the fighter pilot over the weekend . <eos>
+We all know that the journalist put his tape recorder on the table during the press conference . <eos>
+I know that your friend gave to Mary last weekend . <eos>
+The accountant wondered that the secretary introduced to her friend last night . <eos>
+The stewardess told me that the pilot sent to his family when we landed . <eos>
+We discovered that the witty actor told about the hostess during the party . <eos>
+The neighbors found out that the young woman bought for her fiancee in a rush . <eos>
+My friend knows that the successful architect built for her mother last year . <eos>
+The commissioner discovered that the police detective handed to the man in the trench coat just a few minutes ago . <eos>
+We all know that the investor lent to his nephew after the housing market crashed . <eos>
+I know that the hapless businessman repaid to the mafia kingpin when he had enough money . <eos>
+The newspaper reported that the administrator promised to the factory workers during the speech . <eos>
+Her friend found out that the slimy businessman sold to the unsuspecting couple yesterday . <eos>
+I realized that the foreign visitor told to the guests over dinner . <eos>
+The novel revealed that the suffering artist penned about tragic love last winter . <eos>
+We all know that the young politician said about immigration a week before the primaries . <eos>
+I know that the young professional assembled for his parents last night . <eos>
+My friends all know that the businesswoman left in the office this afternoon . <eos>
+The visitor said that the elderly lady described to her friends during the card game . <eos>
+I know that the single mother called for advice late at night . <eos>
+The colleagues realized that the human resources officer found for the intern yesterday . <eos>
+She said that the five star general awarded to the fighter pilot over the weekend . <eos>
+We all know that the journalist put on the table during the press conference . <eos>
+I know what your friend gave a baguette to Mary last weekend . <eos>
+The accountant wondered who the secretary introduced a young man to her friend last night . <eos>
+The stewardess told me what the pilot sent a present to his family when we landed . <eos>
+We discovered what the witty actor told an embarrassing story about the hostess during the party . <eos>
+The neighbors found out what the young woman bought a cake for her fiancee in a rush . <eos>
+My friend knows what the successful architect built a house for her mother last year . <eos>
+The commissioner discovered what the police detective handed a wad of cash to the man in the trench coat just a few minutes ago . <eos>
+We all know what the investor lent a lot of money to his nephew after the housing market crashed . <eos>
+I know what the hapless businessman repaid his debt to the mafia kingpin when he had enough money . <eos>
+The newspaper reported what the administrator promised a good retirement plan to the factory workers during the speech . <eos>
+Her friend found out what the slimy businessman sold a broken car to the unsuspecting couple yesterday . <eos>
+I realized what the foreign visitor told a joke to the guests over dinner . <eos>
+The novel revealed what the suffering artist penned his new novel about tragic love last winter . <eos>
+We all know what the young politician said a few remarks about immigration a week before the primaries . <eos>
+I know what the young professional assembled a fancy meal for his parents last night . <eos>
+My friends all know who the businesswoman left her computer in the office this afternoon . <eos>
+The visitor said what the elderly lady described her morning routine to her friends during the card game . <eos>
+I know who the single mother called her father for advice late at night . <eos>
+The colleagues realized what the human resources officer found a spare computer charger for the intern yesterday . <eos>
+She said what the five star general awarded a medal to the fighter pilot over the weekend . <eos>
+We all know who the journalist put his tape recorder on the table during the press conference . <eos>
+I know what your friend gave to Mary last weekend . <eos>
+The accountant wondered who the secretary introduced to her friend last night . <eos>
+The stewardess told me what the pilot sent to his family when we landed . <eos>
+We discovered what the witty actor told about the hostess during the party . <eos>
+The neighbors found out what the young woman bought for her fiancee in a rush . <eos>
+My friend knows what the successful architect built for her mother last year . <eos>
+The commissioner discovered what the police detective handed to the man in the trench coat just a few minutes ago . <eos>
+We all know what the investor lent to his nephew after the housing market crashed . <eos>
+I know what the hapless businessman repaid to the mafia kingpin when he had enough money . <eos>
+The newspaper reported what the administrator promised to the factory workers during the speech . <eos>
+Her friend found out what the slimy businessman sold to the unsuspecting couple yesterday . <eos>
+I realized what the foreign visitor told to the guests over dinner . <eos>
+The novel revealed what the suffering artist penned about tragic love last winter . <eos>
+We all know what the young politician said about immigration a week before the primaries . <eos>
+I know what the young professional assembled for his parents last night . <eos>
+My friends all know who the businesswoman left in the office this afternoon . <eos>
+The visitor said what the elderly lady described to her friends during the card game . <eos>
+I know who the single mother called for advice late at night . <eos>
+The colleagues realized what the human resources officer found for the intern yesterday . <eos>
+She said what the five star general awarded to the fighter pilot over the weekend . <eos>
+We all know who the journalist put on the table during the press conference . <eos>
+I know that your friend gave a baguette to Mary last weekend . <eos>
+The accountant wondered that the secretary introduced a young man to her friend last night . <eos>
+The stewardess told me that the pilot sent a present to his family when we landed . <eos>
+We discovered that the witty actor told an embarrassing story about the hostess during the party . <eos>
+The neighbors found out that the young woman bought a cake for her fiancee in a rush . <eos>
+My friend knows that the successful architect built a house for her mother last year . <eos>
+The commissioner discovered that the police detective handed a wad of cash to the man in the trench coat just a few minutes ago . <eos>
+We all know that the investor lent a lot of money to his nephew after the housing market crashed . <eos>
+I know that the hapless businessman repaid his debt to the mafia kingpin when he had enough money . <eos>
+The newspaper reported that the administrator promised a good retirement plan to the factory workers during the speech . <eos>
+Her friend found out that the slimy businessman sold a broken car to the unsuspecting couple yesterday . <eos>
+I realized that the foreign visitor told a joke to the guests over dinner . <eos>
+The novel revealed that the suffering artist penned his new novel about tragic love last winter . <eos>
+We all know that the young politician said a few remarks about immigration a week before the primaries . <eos>
+I know that the young professional assembled a fancy meal for his parents last night . <eos>
+My friends all know that the businesswoman left her computer in the office this afternoon . <eos>
+The visitor said that the elderly lady described her morning routine to her friends during the card game . <eos>
+I know that the single mother called her father for advice late at night . <eos>
+The colleagues realized that the human resources officer found a spare computer charger for the intern yesterday . <eos>
+She said that the five star general awarded a medal to the fighter pilot over the weekend . <eos>
+We all know that the journalist put his tape recorder on the table during the press conference . <eos>
+I know that your friend gave a baguette to last weekend . <eos>
+The accountant wondered that the secretary introduced a young man to last night . <eos>
+The stewardess told me that the pilot sent a present to when we landed . <eos>
+We discovered that the witty actor told an embarrassing story about during the party . <eos>
+The neighbors found out that the young woman bought a cake for in a rush . <eos>
+My friend knows that the successful architect built a house for last year . <eos>
+The commissioner discovered that the police detective handed a wad of cash to just a few minutes ago . <eos>
+We all know that the investor lent a lot of money to after the housing market crashed . <eos>
+I know that the hapless businessman repaid his debt to when he had enough money . <eos>
+The newspaper reported that the administrator promised a good retirement plan to during the speech . <eos>
+Her friend found out that the slimy businessman sold a broken car to yesterday . <eos>
+I realized that the foreign visitor told a joke to over dinner . <eos>
+The novel revealed that the suffering artist penned his new novel about last winter . <eos>
+We all know that the young politician said a few remarks about a week before the primaries . <eos>
+I know that the young professional assembled a fancy meal for last night . <eos>
+My friends all know that the businesswoman left her computer in this afternoon . <eos>
+The visitor said that the elderly lady described her morning routine to during the card game . <eos>
+I know that the single mother called her father for late at night . <eos>
+The colleagues realized that the human resources officer found a spare computer charger for yesterday . <eos>
+She said that the five star general awarded a medal to over the weekend . <eos>
+We all know that the journalist put his tape recorder on during the press conference . <eos>
+I know who your friend gave a baguette to Mary last weekend . <eos>
+The accountant wondered who the secretary introduced a young man to her friend last night . <eos>
+The stewardess told me who the pilot sent a present to his family when we landed . <eos>
+We discovered who the witty actor told an embarrassing story about the hostess during the party . <eos>
+The neighbors found out who the young woman bought a cake for her fiancee in a rush . <eos>
+My friend knows who the successful architect built a house for her mother last year . <eos>
+The commissioner discovered who the police detective handed a wad of cash to the man in the trench coat just a few minutes ago . <eos>
+We all know who the investor lent a lot of money to his nephew after the housing market crashed . <eos>
+I know who the hapless businessman repaid his debt to the mafia kingpin when he had enough money . <eos>
+The newspaper reported who the administrator promised a good retirement plan to the factory workers during the speech . <eos>
+Her friend found out who the slimy businessman sold a broken car to the unsuspecting couple yesterday . <eos>
+I realized who the foreign visitor told a joke to the guests over dinner . <eos>
+The novel revealed what the suffering artist penned his new novel about tragic love last winter . <eos>
+We all know what the young politician said a few remarks about immigration a week before the primaries . <eos>
+I know who the young professional assembled a fancy meal for his parents last night . <eos>
+My friends all know what the businesswoman left her computer in the office this afternoon . <eos>
+The visitor said who the elderly lady described her morning routine to her friends during the card game . <eos>
+I know what the single mother called her father for advice late at night . <eos>
+The colleagues realized who the human resources officer found a spare computer charger for the intern yesterday . <eos>
+She said who the five star general awarded a medal to the fighter pilot over the weekend . <eos>
+We all know what the journalist put his tape recorder on the table during the press conference . <eos>
+I know who your friend gave a baguette to last weekend . <eos>
+The accountant wondered who the secretary introduced a young man to last night . <eos>
+The stewardess told me who the pilot sent a present to when we landed . <eos>
+We discovered who the witty actor told an embarrassing story about during the party . <eos>
+The neighbors found out who the young woman bought a cake for in a rush . <eos>
+My friend knows who the successful architect built a house for last year . <eos>
+The commissioner discovered who the police detective handed a wad of cash to just a few minutes ago . <eos>
+We all know who the investor lent a lot of money to after the housing market crashed . <eos>
+I know who the hapless businessman repaid his debt to when he had enough money . <eos>
+The newspaper reported who the administrator promised a good retirement plan to during the speech . <eos>
+Her friend found out who the slimy businessman sold a broken car to yesterday . <eos>
+I realized who the foreign visitor told a joke to over dinner . <eos>
+The novel revealed what the suffering artist penned his new novel about last winter . <eos>
+We all know what the young politician said a few remarks about a week before the primaries . <eos>
+I know who the young professional assembled a fancy meal for last night . <eos>
+My friends all know what the businesswoman left her computer in this afternoon . <eos>
+The visitor said who the elderly lady described her morning routine to during the card game . <eos>
+I know what the single mother called her father for late at night . <eos>
+The colleagues realized who the human resources officer found a spare computer charger for yesterday . <eos>
+She said who the five star general awarded a medal to over the weekend . <eos>
+We all know what the journalist put his tape recorder on during the press conference . <eos>
+I know that your friend who you admire gave a baguette to Mary last weekend . <eos>
+The accountant wondered that the secretary who we all admire introduced a young man to her friend last night . <eos>
+The stewardess told me that the pilot in the blue cap sent a present to his family when we landed . <eos>
+We discovered that the witty actor with the long mustaches told an embarrassing story about the hostess during the party . <eos>
+The neighbors found out that the young woman who loved to bake bought a cake for her fiancee in a rush . <eos>
+My friend knows that the successful architect who won many awards built a house for her mother last year . <eos>
+The commissioner discovered that the police detective who was very honest handed a wad of cash to the man in the trench coat just a few minutes ago . <eos>
+We all know that the investor who had a television program lent a lot of money to his nephew after the housing market crashed . <eos>
+I know that the hapless businessman from a small town repaid his debt to the mafia kingpin when he had enough money . <eos>
+The newspaper reported that the administrator in the expensive suit promised a good retirement plan to the factory workers during the speech . <eos>
+Her friend found out that the slimy businessman with the slicked back hair sold a broken car to the unsuspecting couple yesterday . <eos>
+I realized that the foreign visitor from far away told a joke to the guests over dinner . <eos>
+The novel revealed that the suffering artist who ate hardly anything penned his new novel about tragic love last winter . <eos>
+We all know that the young politician who is very idealistic said a few remarks about immigration a week before the primaries . <eos>
+I know that the young professional who recently graduated college assembled a fancy meal for his parents last night . <eos>
+My friends all know that the businesswoman who we met yesterday left her computer in the office this afternoon . <eos>
+The visitor said that the elderly lady in the pink dress described her morning routine to her friends during the card game . <eos>
+I know that the single mother who worked very hard called her father for advice late at night . <eos>
+The colleagues realized that the human resources officer who works down the hall found a spare computer charger for the intern yesterday . <eos>
+She said that the five star general who is known to be brave awarded a medal to the fighter pilot over the weekend . <eos>
+We all know that the journalist who writes about business put his tape recorder on the table during the press conference . <eos>
+I know that your friend who you admire gave to Mary last weekend . <eos>
+The accountant wondered that the secretary who we all admire introduced to her friend last night . <eos>
+The stewardess told me that the pilot in the blue cap sent to his family when we landed . <eos>
+We discovered that the witty actor with the long mustaches told about the hostess during the party . <eos>
+The neighbors found out that the young woman who loved to bake bought for her fiancee in a rush . <eos>
+My friend knows that the successful architect who won many awards built for her mother last year . <eos>
+The commissioner discovered that the police detective who was very honest handed to the man in the trench coat just a few minutes ago . <eos>
+We all know that the investor who had a television program lent to his nephew after the housing market crashed . <eos>
+I know that the hapless businessman from a small town repaid to the mafia kingpin when he had enough money . <eos>
+The newspaper reported that the administrator in the expensive suit promised to the factory workers during the speech . <eos>
+Her friend found out that the slimy businessman with the slicked back hair sold to the unsuspecting couple yesterday . <eos>
+I realized that the foreign visitor from far away told to the guests over dinner . <eos>
+The novel revealed that the suffering artist who ate hardly anything penned about tragic love last winter . <eos>
+We all know that the young politician who is very idealistic said about immigration a week before the primaries . <eos>
+I know that the young professional who recently graduated college assembled for his parents last night . <eos>
+My friends all know that the businesswoman who we met yesterday left in the office this afternoon . <eos>
+The visitor said that the elderly lady in the pink dress described to her friends during the card game . <eos>
+I know that the single mother who worked very hard called for advice late at night . <eos>
+The colleagues realized that the human resources officer who works down the hall found for the intern yesterday . <eos>
+She said that the five star general who is known to be brave awarded to the fighter pilot over the weekend . <eos>
+We all know that the journalist who writes about business put on the table during the press conference . <eos>
+I know what your friend who you admire gave a baguette to Mary last weekend . <eos>
+The accountant wondered who the secretary who we all admire introduced a young man to her friend last night . <eos>
+The stewardess told me what the pilot in the blue cap sent a present to his family when we landed . <eos>
+We discovered what the witty actor with the long mustaches told an embarrassing story about the hostess during the party . <eos>
+The neighbors found out what the young woman who loved to bake bought a cake for her fiancee in a rush . <eos>
+My friend knows what the successful architect who won many awards built a house for her mother last year . <eos>
+The commissioner discovered what the police detective who was very honest handed a wad of cash to the man in the trench coat just a few minutes ago . <eos>
+We all know what the investor who had a television program lent a lot of money to his nephew after the housing market crashed . <eos>
+I know what the hapless businessman from a small town repaid his debt to the mafia kingpin when he had enough money . <eos>
+The newspaper reported what the administrator in the expensive suit promised a good retirement plan to the factory workers during the speech . <eos>
+Her friend found out what the slimy businessman with the slicked back hair sold a broken car to the unsuspecting couple yesterday . <eos>
+I realized what the foreign visitor from far away told a joke to the guests over dinner . <eos>
+The novel revealed what the suffering artist who ate hardly anything penned his new novel about tragic love last winter . <eos>
+We all know what the young politician who is very idealistic said a few remarks about immigration a week before the primaries . <eos>
+I know what the young professional who recently graduated college assembled a fancy meal for his parents last night . <eos>
+My friends all know who the businesswoman who we met yesterday left her computer in the office this afternoon . <eos>
+The visitor said what the elderly lady in the pink dress described her morning routine to her friends during the card game . <eos>
+I know who the single mother who worked very hard called her father for advice late at night . <eos>
+The colleagues realized what the human resources officer who works down the hall found a spare computer charger for the intern yesterday . <eos>
+She said what the five star general who is known to be brave awarded a medal to the fighter pilot over the weekend . <eos>
+We all know who the journalist who writes about business put his tape recorder on the table during the press conference . <eos>
+I know what your friend who you admire gave to Mary last weekend . <eos>
+The accountant wondered who the secretary who we all admire introduced to her friend last night . <eos>
+The stewardess told me what the pilot in the blue cap sent to his family when we landed . <eos>
+We discovered what the witty actor with the long mustaches told about the hostess during the party . <eos>
+The neighbors found out what the young woman who loved to bake bought for her fiancee in a rush . <eos>
+My friend knows what the successful architect who won many awards built for her mother last year . <eos>
+The commissioner discovered what the police detective who was very honest handed to the man in the trench coat just a few minutes ago . <eos>
+We all know what the investor who had a television program lent to his nephew after the housing market crashed . <eos>
+I know what the hapless businessman from a small town repaid to the mafia kingpin when he had enough money . <eos>
+The newspaper reported what the administrator in the expensive suit promised to the factory workers during the speech . <eos>
+Her friend found out what the slimy businessman with the slicked back hair sold to the unsuspecting couple yesterday . <eos>
+I realized what the foreign visitor from far away told to the guests over dinner . <eos>
+The novel revealed what the suffering artist who ate hardly anything penned about tragic love last winter . <eos>
+We all know what the young politician who is very idealistic said about immigration a week before the primaries . <eos>
+I know what the young professional who recently graduated college assembled for his parents last night . <eos>
+My friends all know who the businesswoman who we met yesterday left in the office this afternoon . <eos>
+The visitor said what the elderly lady in the pink dress described to her friends during the card game . <eos>
+I know who the single mother who worked very hard called for advice late at night . <eos>
+The colleagues realized what the human resources officer who works down the hall found for the intern yesterday . <eos>
+She said what the five star general who is known to be brave awarded to the fighter pilot over the weekend . <eos>
+We all know who the journalist who writes about business put on the table during the press conference . <eos>
+I know that your friend who you admire gave a baguette to Mary last weekend . <eos>
+The accountant wondered that the secretary who we all admire introduced a young man to her friend last night . <eos>
+The stewardess told me that the pilot in the blue cap sent a present to his family when we landed . <eos>
+We discovered that the witty actor with the long mustaches told an embarrassing story about the hostess during the party . <eos>
+The neighbors found out that the young woman who loved to bake bought a cake for her fiancee in a rush . <eos>
+My friend knows that the successful architect who won many awards built a house for her mother last year . <eos>
+The commissioner discovered that the police detective who was very honest handed a wad of cash to the man in the trench coat just a few minutes ago . <eos>
+We all know that the investor who had a television program lent a lot of money to his nephew after the housing market crashed . <eos>
+I know that the hapless businessman from a small town repaid his debt to the mafia kingpin when he had enough money . <eos>
+The newspaper reported that the administrator in the expensive suit promised a good retirement plan to the factory workers during the speech . <eos>
+Her friend found out that the slimy businessman with the slicked back hair sold a broken car to the unsuspecting couple yesterday . <eos>
+I realized that the foreign visitor from far away told a joke to the guests over dinner . <eos>
+The novel revealed that the suffering artist who ate hardly anything penned his new novel about tragic love last winter . <eos>
+We all know that the young politician who is very idealistic said a few remarks about immigration a week before the primaries . <eos>
+I know that the young professional who recently graduated college assembled a fancy meal for his parents last night . <eos>
+My friends all know that the businesswoman who we met yesterday left her computer in the office this afternoon . <eos>
+The visitor said that the elderly lady in the pink dress described her morning routine to her friends during the card game . <eos>
+I know that the single mother who worked very hard called her father for advice late at night . <eos>
+The colleagues realized that the human resources officer who works down the hall found a spare computer charger for the intern yesterday . <eos>
+She said that the five star general who is known to be brave awarded a medal to the fighter pilot over the weekend . <eos>
+We all know that the journalist who writes about business put his tape recorder on the table during the press conference . <eos>
+I know that your friend who you admire gave a baguette to last weekend . <eos>
+The accountant wondered that the secretary who we all admire introduced a young man to last night . <eos>
+The stewardess told me that the pilot in the blue cap sent a present to when we landed . <eos>
+We discovered that the witty actor with the long mustaches told an embarrassing story about during the party . <eos>
+The neighbors found out that the young woman who loved to bake bought a cake for in a rush . <eos>
+My friend knows that the successful architect who won many awards built a house for last year . <eos>
+The commissioner discovered that the police detective who was very honest handed a wad of cash to just a few minutes ago . <eos>
+We all know that the investor who had a television program lent a lot of money to after the housing market crashed . <eos>
+I know that the hapless businessman from a small town repaid his debt to when he had enough money . <eos>
+The newspaper reported that the administrator in the expensive suit promised a good retirement plan to during the speech . <eos>
+Her friend found out that the slimy businessman with the slicked back hair sold a broken car to yesterday . <eos>
+I realized that the foreign visitor from far away told a joke to over dinner . <eos>
+The novel revealed that the suffering artist who ate hardly anything penned his new novel about last winter . <eos>
+We all know that the young politician who is very idealistic said a few remarks about a week before the primaries . <eos>
+I know that the young professional who recently graduated college assembled a fancy meal for last night . <eos>
+My friends all know that the businesswoman who we met yesterday left her computer in this afternoon . <eos>
+The visitor said that the elderly lady in the pink dress described her morning routine to during the card game . <eos>
+I know that the single mother who worked very hard called her father for late at night . <eos>
+The colleagues realized that the human resources officer who works down the hall found a spare computer charger for yesterday . <eos>
+She said that the five star general who is known to be brave awarded a medal to over the weekend . <eos>
+We all know that the journalist who writes about business put his tape recorder on during the press conference . <eos>
+I know who your friend who you admire gave a baguette to Mary last weekend . <eos>
+The accountant wondered who the secretary who we all admire introduced a young man to her friend last night . <eos>
+The stewardess told me who the pilot in the blue cap sent a present to his family when we landed . <eos>
+We discovered who the witty actor with the long mustaches told an embarrassing story about the hostess during the party . <eos>
+The neighbors found out who the young woman who loved to bake bought a cake for her fiancee in a rush . <eos>
+My friend knows who the successful architect who won many awards built a house for her mother last year . <eos>
+The commissioner discovered who the police detective who was very honest handed a wad of cash to the man in the trench coat just a few minutes ago . <eos>
+We all know who the investor who had a television program lent a lot of money to his nephew after the housing market crashed . <eos>
+I know who the hapless businessman from a small town repaid his debt to the mafia kingpin when he had enough money . <eos>
+The newspaper reported who the administrator in the expensive suit promised a good retirement plan to the factory workers during the speech . <eos>
+Her friend found out who the slimy businessman with the slicked back hair sold a broken car to the unsuspecting couple yesterday . <eos>
+I realized who the foreign visitor from far away told a joke to the guests over dinner . <eos>
+The novel revealed what the suffering artist who ate hardly anything penned his new novel about tragic love last winter . <eos>
+We all know what the young politician who is very idealistic said a few remarks about immigration a week before the primaries . <eos>
+I know who the young professional who recently graduated college assembled a fancy meal for his parents last night . <eos>
+My friends all know what the businesswoman who we met yesterday left her computer in the office this afternoon . <eos>
+The visitor said who the elderly lady in the pink dress described her morning routine to her friends during the card game . <eos>
+I know what the single mother who worked very hard called her father for advice late at night . <eos>
+The colleagues realized who the human resources officer who works down the hall found a spare computer charger for the intern yesterday . <eos>
+She said who the five star general who is known to be brave awarded a medal to the fighter pilot over the weekend . <eos>
+We all know what the journalist who writes about business put his tape recorder on the table during the press conference . <eos>
+I know who your friend who you admire gave a baguette to last weekend . <eos>
+The accountant wondered who the secretary who we all admire introduced a young man to last night . <eos>
+The stewardess told me who the pilot in the blue cap sent a present to when we landed . <eos>
+We discovered who the witty actor with the long mustaches told an embarrassing story about during the party . <eos>
+The neighbors found out who the young woman who loved to bake bought a cake for in a rush . <eos>
+My friend knows who the successful architect who won many awards built a house for last year . <eos>
+The commissioner discovered who the police detective who was very honest handed a wad of cash to just a few minutes ago . <eos>
+We all know who the investor who had a television program lent a lot of money to after the housing market crashed . <eos>
+I know who the hapless businessman from a small town repaid his debt to when he had enough money . <eos>
+The newspaper reported who the administrator in the expensive suit promised a good retirement plan to during the speech . <eos>
+Her friend found out who the slimy businessman with the slicked back hair sold a broken car to yesterday . <eos>
+I realized who the foreign visitor from far away told a joke to over dinner . <eos>
+The novel revealed what the suffering artist who ate hardly anything penned his new novel about last winter . <eos>
+We all know what the young politician who is very idealistic said a few remarks about a week before the primaries . <eos>
+I know who the young professional who recently graduated college assembled a fancy meal for last night . <eos>
+My friends all know what the businesswoman who we met yesterday left her computer in this afternoon . <eos>
+The visitor said who the elderly lady in the pink dress described her morning routine to during the card game . <eos>
+I know what the single mother who worked very hard called her father for late at night . <eos>
+The colleagues realized who the human resources officer who works down the hall found a spare computer charger for yesterday . <eos>
+She said who the five star general who is known to be brave awarded a medal to over the weekend . <eos>
+We all know what the journalist who writes about business put his tape recorder on during the press conference . <eos>
+I know that your friend who you ate lunch with yesterday gave a baguette to Mary last weekend . <eos>
+The accountant wondered that the secretary who we all admire for her wit introduced a young man to her friend last night . <eos>
+The stewardess told me that the pilot in the blue jacket and cap sent a present to his family when we landed . <eos>
+We discovered that the witty actor with the long mustaches and wry smile told an embarrassing story about the hostess during the party . <eos>
+The neighbors found out that the young woman who loved to bake French desserts bought a cake for her fiancee in a rush . <eos>
+My friend knows that the successful architect who was recently awarded a prestigious contract built a house for her mother last year . <eos>
+The commissioner discovered that the police detective who we all thought was honest handed a wad of cash to the man in the trench coat just a few minutes ago . <eos>
+We all know that the investor who was featured on a popular television show lent a lot of money to his nephew after the housing market crashed . <eos>
+I know that the hapless businessman from a small town by the ocean repaid his debt to the mafia kingpin when he had enough money . <eos>
+The newspaper reported that the administrator in the expensive suit and leather shoes promised a good retirement plan to the factory workers during the speech . <eos>
+Her friend found out that the slimy businessman with the slicked back hair and cheap suit sold a broken car to the unsuspecting couple yesterday . <eos>
+I realized that the foreign visitor from a country we have never visited told a joke to the guests over dinner . <eos>
+The novel revealed that the suffering artist who ate hardly anything except cheese penned his new novel about tragic love last winter . <eos>
+We all know that the young politician who believes in justice and equality said a few remarks about immigration a week before the primaries . <eos>
+I know that the young professional who majored in anthropology in college assembled a fancy meal for his parents last night . <eos>
+My friends all know that the businesswoman who we met yesterday in the hotel lobby left her computer in the office this afternoon . <eos>
+The visitor said that the elderly lady in the pink dress and straw hat described her morning routine to her friends during the card game . <eos>
+I know that the single mother who lost her husband last year called her father for advice late at night . <eos>
+The colleagues realized that the human resources officer who works down the hall in a big office found a spare computer charger for the intern yesterday . <eos>
+She said that the five star general who is known to be committed to diversity awarded a medal to the fighter pilot over the weekend . <eos>
+We all know that the journalist who writes about business and local politics put his tape recorder on the table during the press conference . <eos>
+I know that your friend who you ate lunch with yesterday gave to Mary last weekend . <eos>
+The accountant wondered that the secretary who we all admire for her wit introduced to her friend last night . <eos>
+The stewardess told me that the pilot in the blue jacket and cap sent to his family when we landed . <eos>
+We discovered that the witty actor with the long mustaches and wry smile told about the hostess during the party . <eos>
+The neighbors found out that the young woman who loved to bake French desserts bought for her fiancee in a rush . <eos>
+My friend knows that the successful architect who was recently awarded a prestigious contract built for her mother last year . <eos>
+The commissioner discovered that the police detective who we all thought was honest handed to the man in the trench coat just a few minutes ago . <eos>
+We all know that the investor who was featured on a popular television show lent to his nephew after the housing market crashed . <eos>
+I know that the hapless businessman from a small town by the ocean repaid to the mafia kingpin when he had enough money . <eos>
+The newspaper reported that the administrator in the expensive suit and leather shoes promised to the factory workers during the speech . <eos>
+Her friend found out that the slimy businessman with the slicked back hair and cheap suit sold to the unsuspecting couple yesterday . <eos>
+I realized that the foreign visitor from a country we have never visited told to the guests over dinner . <eos>
+The novel revealed that the suffering artist who ate hardly anything except cheese penned about tragic love last winter . <eos>
+We all know that the young politician who believes in justice and equality said about immigration a week before the primaries . <eos>
+I know that the young professional who majored in anthropology in college assembled for his parents last night . <eos>
+My friends all know that the businesswoman who we met yesterday in the hotel lobby left in the office this afternoon . <eos>
+The visitor said that the elderly lady in the pink dress and straw hat described to her friends during the card game . <eos>
+I know that the single mother who lost her husband last year called for advice late at night . <eos>
+The colleagues realized that the human resources officer who works down the hall in a big office found for the intern yesterday . <eos>
+She said that the five star general who is known to be committed to diversity awarded to the fighter pilot over the weekend . <eos>
+We all know that the journalist who writes about business and local politics put on the table during the press conference . <eos>
+I know what your friend who you ate lunch with yesterday gave a baguette to Mary last weekend . <eos>
+The accountant wondered who the secretary who we all admire for her wit introduced a young man to her friend last night . <eos>
+The stewardess told me what the pilot in the blue jacket and cap sent a present to his family when we landed . <eos>
+We discovered what the witty actor with the long mustaches and wry smile told an embarrassing story about the hostess during the party . <eos>
+The neighbors found out what the young woman who loved to bake French desserts bought a cake for her fiancee in a rush . <eos>
+My friend knows what the successful architect who was recently awarded a prestigious contract built a house for her mother last year . <eos>
+The commissioner discovered what the police detective who we all thought was honest handed a wad of cash to the man in the trench coat just a few minutes ago . <eos>
+We all know what the investor who was featured on a popular television show lent a lot of money to his nephew after the housing market crashed . <eos>
+I know what the hapless businessman from a small town by the ocean repaid his debt to the mafia kingpin when he had enough money . <eos>
+The newspaper reported what the administrator in the expensive suit and leather shoes promised a good retirement plan to the factory workers during the speech . <eos>
+Her friend found out what the slimy businessman with the slicked back hair and cheap suit sold a broken car to the unsuspecting couple yesterday . <eos>
+I realized what the foreign visitor from a country we have never visited told a joke to the guests over dinner . <eos>
+The novel revealed what the suffering artist who ate hardly anything except cheese penned his new novel about tragic love last winter . <eos>
+We all know what the young politician who believes in justice and equality said a few remarks about immigration a week before the primaries . <eos>
+I know what the young professional who majored in anthropology in college assembled a fancy meal for his parents last night . <eos>
+My friends all know who the businesswoman who we met yesterday in the hotel lobby left her computer in the office this afternoon . <eos>
+The visitor said what the elderly lady in the pink dress and straw hat described her morning routine to her friends during the card game . <eos>
+I know who the single mother who lost her husband last year called her father for advice late at night . <eos>
+The colleagues realized what the human resources officer who works down the hall in a big office found a spare computer charger for the intern yesterday . <eos>
+She said what the five star general who is known to be committed to diversity awarded a medal to the fighter pilot over the weekend . <eos>
+We all know who the journalist who writes about business and local politics put his tape recorder on the table during the press conference . <eos>
+I know what your friend who you ate lunch with yesterday gave to Mary last weekend . <eos>
+The accountant wondered who the secretary who we all admire for her wit introduced to her friend last night . <eos>
+The stewardess told me what the pilot in the blue jacket and cap sent to his family when we landed . <eos>
+We discovered what the witty actor with the long mustaches and wry smile told about the hostess during the party . <eos>
+The neighbors found out what the young woman who loved to bake French desserts bought for her fiancee in a rush . <eos>
+My friend knows what the successful architect who was recently awarded a prestigious contract built for her mother last year . <eos>
+The commissioner discovered what the police detective who we all thought was honest handed to the man in the trench coat just a few minutes ago . <eos>
+We all know what the investor who was featured on a popular television show lent to his nephew after the housing market crashed . <eos>
+I know what the hapless businessman from a small town by the ocean repaid to the mafia kingpin when he had enough money . <eos>
+The newspaper reported what the administrator in the expensive suit and leather shoes promised to the factory workers during the speech . <eos>
+Her friend found out what the slimy businessman with the slicked back hair and cheap suit sold to the unsuspecting couple yesterday . <eos>
+I realized what the foreign visitor from a country we have never visited told to the guests over dinner . <eos>
+The novel revealed what the suffering artist who ate hardly anything except cheese penned about tragic love last winter . <eos>
+We all know what the young politician who believes in justice and equality said about immigration a week before the primaries . <eos>
+I know what the young professional who majored in anthropology in college assembled for his parents last night . <eos>
+My friends all know who the businesswoman who we met yesterday in the hotel lobby left in the office this afternoon . <eos>
+The visitor said what the elderly lady in the pink dress and straw hat described to her friends during the card game . <eos>
+I know who the single mother who lost her husband last year called for advice late at night . <eos>
+The colleagues realized what the human resources officer who works down the hall in a big office found for the intern yesterday . <eos>
+She said what the five star general who is known to be committed to diversity awarded to the fighter pilot over the weekend . <eos>
+We all know who the journalist who writes about business and local politics put on the table during the press conference . <eos>
+I know that your friend who you ate lunch with yesterday gave a baguette to Mary last weekend . <eos>
+The accountant wondered that the secretary who we all admire for her wit introduced a young man to her friend last night . <eos>
+The stewardess told me that the pilot in the blue jacket and cap sent a present to his family when we landed . <eos>
+We discovered that the witty actor with the long mustaches and wry smile told an embarrassing story about the hostess during the party . <eos>
+The neighbors found out that the young woman who loved to bake French desserts bought a cake for her fiancee in a rush . <eos>
+My friend knows that the successful architect who was recently awarded a prestigious contract built a house for her mother last year . <eos>
+The commissioner discovered that the police detective who we all thought was honest handed a wad of cash to the man in the trench coat just a few minutes ago . <eos>
+We all know that the investor who was featured on a popular television show lent a lot of money to his nephew after the housing market crashed . <eos>
+I know that the hapless businessman from a small town by the ocean repaid his debt to the mafia kingpin when he had enough money . <eos>
+The newspaper reported that the administrator in the expensive suit and leather shoes promised a good retirement plan to the factory workers during the speech . <eos>
+Her friend found out that the slimy businessman with the slicked back hair and cheap suit sold a broken car to the unsuspecting couple yesterday . <eos>
+I realized that the foreign visitor from a country we have never visited told a joke to the guests over dinner . <eos>
+The novel revealed that the suffering artist who ate hardly anything except cheese penned his new novel about tragic love last winter . <eos>
+We all know that the young politician who believes in justice and equality said a few remarks about immigration a week before the primaries . <eos>
+I know that the young professional who majored in anthropology in college assembled a fancy meal for his parents last night . <eos>
+My friends all know that the businesswoman who we met yesterday in the hotel lobby left her computer in the office this afternoon . <eos>
+The visitor said that the elderly lady in the pink dress and straw hat described her morning routine to her friends during the card game . <eos>
+I know that the single mother who lost her husband last year called her father for advice late at night . <eos>
+The colleagues realized that the human resources officer who works down the hall in a big office found a spare computer charger for the intern yesterday . <eos>
+She said that the five star general who is known to be committed to diversity awarded a medal to the fighter pilot over the weekend . <eos>
+We all know that the journalist who writes about business and local politics put his tape recorder on the table during the press conference . <eos>
+I know that your friend who you ate lunch with yesterday gave a baguette to last weekend . <eos>
+The accountant wondered that the secretary who we all admire for her wit introduced a young man to last night . <eos>
+The stewardess told me that the pilot in the blue jacket and cap sent a present to when we landed . <eos>
+We discovered that the witty actor with the long mustaches and wry smile told an embarrassing story about during the party . <eos>
+The neighbors found out that the young woman who loved to bake French desserts bought a cake for in a rush . <eos>
+My friend knows that the successful architect who was recently awarded a prestigious contract built a house for last year . <eos>
+The commissioner discovered that the police detective who we all thought was honest handed a wad of cash to just a few minutes ago . <eos>
+We all know that the investor who was featured on a popular television show lent a lot of money to after the housing market crashed . <eos>
+I know that the hapless businessman from a small town by the ocean repaid his debt to when he had enough money . <eos>
+The newspaper reported that the administrator in the expensive suit and leather shoes promised a good retirement plan to during the speech . <eos>
+Her friend found out that the slimy businessman with the slicked back hair and cheap suit sold a broken car to yesterday . <eos>
+I realized that the foreign visitor from a country we have never visited told a joke to over dinner . <eos>
+The novel revealed that the suffering artist who ate hardly anything except cheese penned his new novel about last winter . <eos>
+We all know that the young politician who believes in justice and equality said a few remarks about a week before the primaries . <eos>
+I know that the young professional who majored in anthropology in college assembled a fancy meal for last night . <eos>
+My friends all know that the businesswoman who we met yesterday in the hotel lobby left her computer in this afternoon . <eos>
+The visitor said that the elderly lady in the pink dress and straw hat described her morning routine to during the card game . <eos>
+I know that the single mother who lost her husband last year called her father for late at night . <eos>
+The colleagues realized that the human resources officer who works down the hall in a big office found a spare computer charger for yesterday . <eos>
+She said that the five star general who is known to be committed to diversity awarded a medal to over the weekend . <eos>
+We all know that the journalist who writes about business and local politics put his tape recorder on during the press conference . <eos>
+I know who your friend who you ate lunch with yesterday gave a baguette to Mary last weekend . <eos>
+The accountant wondered who the secretary who we all admire for her wit introduced a young man to her friend last night . <eos>
+The stewardess told me who the pilot in the blue jacket and cap sent a present to his family when we landed . <eos>
+We discovered who the witty actor with the long mustaches and wry smile told an embarrassing story about the hostess during the party . <eos>
+The neighbors found out who the young woman who loved to bake French desserts bought a cake for her fiancee in a rush . <eos>
+My friend knows who the successful architect who was recently awarded a prestigious contract built a house for her mother last year . <eos>
+The commissioner discovered who the police detective who we all thought was honest handed a wad of cash to the man in the trench coat just a few minutes ago . <eos>
+We all know who the investor who was featured on a popular television show lent a lot of money to his nephew after the housing market crashed . <eos>
+I know who the hapless businessman from a small town by the ocean repaid his debt to the mafia kingpin when he had enough money . <eos>
+The newspaper reported who the administrator in the expensive suit and leather shoes promised a good retirement plan to the factory workers during the speech . <eos>
+Her friend found out who the slimy businessman with the slicked back hair and cheap suit sold a broken car to the unsuspecting couple yesterday . <eos>
+I realized who the foreign visitor from a country we have never visited told a joke to the guests over dinner . <eos>
+The novel revealed what the suffering artist who ate hardly anything except cheese penned his new novel about tragic love last winter . <eos>
+We all know what the young politician who believes in justice and equality said a few remarks about immigration a week before the primaries . <eos>
+I know who the young professional who majored in anthropology in college assembled a fancy meal for his parents last night . <eos>
+My friends all know what the businesswoman who we met yesterday in the hotel lobby left her computer in the office this afternoon . <eos>
+The visitor said who the elderly lady in the pink dress and straw hat described her morning routine to her friends during the card game . <eos>
+I know what the single mother who lost her husband last year called her father for advice late at night . <eos>
+The colleagues realized who the human resources officer who works down the hall in a big office found a spare computer charger for the intern yesterday . <eos>
+She said who the five star general who is known to be committed to diversity awarded a medal to the fighter pilot over the weekend . <eos>
+We all know what the journalist who writes about business and local politics put his tape recorder on the table during the press conference . <eos>
+I know who your friend who you ate lunch with yesterday gave a baguette to last weekend . <eos>
+The accountant wondered who the secretary who we all admire for her wit introduced a young man to last night . <eos>
+The stewardess told me who the pilot in the blue jacket and cap sent a present to when we landed . <eos>
+We discovered who the witty actor with the long mustaches and wry smile told an embarrassing story about during the party . <eos>
+The neighbors found out who the young woman who loved to bake French desserts bought a cake for in a rush . <eos>
+My friend knows who the successful architect who was recently awarded a prestigious contract built a house for last year . <eos>
+The commissioner discovered who the police detective who we all thought was honest handed a wad of cash to just a few minutes ago . <eos>
+We all know who the investor who was featured on a popular television show lent a lot of money to after the housing market crashed . <eos>
+I know who the hapless businessman from a small town by the ocean repaid his debt to when he had enough money . <eos>
+The newspaper reported who the administrator in the expensive suit and leather shoes promised a good retirement plan to during the speech . <eos>
+Her friend found out who the slimy businessman with the slicked back hair and cheap suit sold a broken car to yesterday . <eos>
+I realized who the foreign visitor from a country we have never visited told a joke to over dinner . <eos>
+The novel revealed what the suffering artist who ate hardly anything except cheese penned his new novel about last winter . <eos>
+We all know what the young politician who believes in justice and equality said a few remarks about a week before the primaries . <eos>
+I know who the young professional who majored in anthropology in college assembled a fancy meal for last night . <eos>
+My friends all know what the businesswoman who we met yesterday in the hotel lobby left her computer in this afternoon . <eos>
+The visitor said who the elderly lady in the pink dress and straw hat described her morning routine to during the card game . <eos>
+I know what the single mother who lost her husband last year called her father for late at night . <eos>
+The colleagues realized who the human resources officer who works down the hall in a big office found a spare computer charger for yesterday . <eos>
+She said who the five star general who is known to be committed to diversity awarded a medal to over the weekend . <eos>
+We all know what the journalist who writes about business and local politics put his tape recorder on during the press conference . <eos>
+I know that your friend who you met recently on a walking tour of the city gave a baguette to Mary last weekend . <eos>
+The accountant wondered that the secretary who we all admire for her wit and strong work ethic introduced a young man to her friend last night . <eos>
+The stewardess told me that the pilot in the dark blue jacket and gold rimmed cap sent a present to his family when we landed . <eos>
+We discovered that the witty actor with the long mustaches and dry sense of humor told an embarrassing story about the hostess during the party . <eos>
+The neighbors found out that the young woman who had always harbored a secret dream of opening a bakery in Paris bought a cake for her fiancee in a rush . <eos>
+My friend knows that the successful architect who was recently awarded a very prestigious contract by the city to design a new museum built a house for her mother last year . <eos>
+The commissioner discovered that the police detective who we all thought was an honest and upright individual handed a wad of cash to the man in the trench coat just a few minutes ago . <eos>
+We all know that the investor who was featured on a prime time television show about how to get the most out of your savings lent a lot of money to his nephew after the housing market crashed . <eos>
+I know that the hapless businessman from the small town in the far north of the country repaid his debt to the mafia kingpin when he had enough money . <eos>
+The newspaper reported that the administrator in the expensive pinstriped suit and the shiny leather shoes promised a good retirement plan to the factory workers during the speech . <eos>
+Her friend found out that the slimy businessman with the slicked back hair and the dangerous looking smile sold a broken car to the unsuspecting couple yesterday . <eos>
+I realized that the foreign visitor from a country on the other side of the world told a joke to the guests over dinner . <eos>
+The novel revealed that the suffering artist who survived on nothing but bread and the occasional bottle of wine penned his new novel about tragic love last winter . <eos>
+We all know that the young politician who believes in justice for all and equity under the law said a few remarks about immigration a week before the primaries . <eos>
+I know that the young professional who majored in anthropology and wrote his thesis on the origins of pasta assembled a fancy meal for his parents last night . <eos>
+My friends all know that the businesswoman who we met yesterday over a fancy lunch in the hotel lobby left her computer in the office this afternoon . <eos>
+The visitor said that the elderly lady in the bright pink dress and wide brimmed straw hat described her morning routine to her friends during the card game . <eos>
+I know that the single mother who lost her husband to a form of severe cancer called her father for advice late at night . <eos>
+The colleagues realized that the human resources officer who works down the hall in a big office with lots of natural light found a spare computer charger for the intern yesterday . <eos>
+She said that the five star general who is known for his bravery in battle and commitment to diversity in the armed forces awarded a medal to the fighter pilot over the weekend . <eos>
+We all know that the journalist who writes about business and politics for the local newspaper put his tape recorder on the table during the press conference . <eos>
+I know that your friend who you met recently on a walking tour of the city gave to Mary last weekend . <eos>
+The accountant wondered that the secretary who we all admire for her wit and strong work ethic introduced to her friend last night . <eos>
+The stewardess told me that the pilot in the dark blue jacket and gold rimmed cap sent to his family when we landed . <eos>
+We discovered that the witty actor with the long mustaches and dry sense of humor told about the hostess during the party . <eos>
+The neighbors found out that the young woman who had always harbored a secret dream of opening a bakery in Paris bought for her fiancee in a rush . <eos>
+My friend knows that the successful architect who was recently awarded a very prestigious contract by the city to design a new museum built for her mother last year . <eos>
+The commissioner discovered that the police detective who we all thought was an honest and upright individual handed to the man in the trench coat just a few minutes ago . <eos>
+We all know that the investor who was featured on a prime time television show about how to get the most out of your savings lent to his nephew after the housing market crashed . <eos>
+I know that the hapless businessman from the small town in the far north of the country repaid to the mafia kingpin when he had enough money . <eos>
+The newspaper reported that the administrator in the expensive pinstriped suit and the shiny leather shoes promised to the factory workers during the speech . <eos>
+Her friend found out that the slimy businessman with the slicked back hair and the dangerous looking smile sold to the unsuspecting couple yesterday . <eos>
+I realized that the foreign visitor from a country on the other side of the world told to the guests over dinner . <eos>
+The novel revealed that the suffering artist who survived on nothing but bread and the occasional bottle of wine penned about tragic love last winter . <eos>
+We all know that the young politician who believes in justice for all and equity under the law said about immigration a week before the primaries . <eos>
+I know that the young professional who majored in anthropology and wrote his thesis on the origins of pasta assembled for his parents last night . <eos>
+My friends all know that the businesswoman who we met yesterday over a fancy lunch in the hotel lobby left in the office this afternoon . <eos>
+The visitor said that the elderly lady in the bright pink dress and wide brimmed straw hat described to her friends during the card game . <eos>
+I know that the single mother who lost her husband to a form of severe cancer called for advice late at night . <eos>
+The colleagues realized that the human resources officer who works down the hall in a big office with lots of natural light found for the intern yesterday . <eos>
+She said that the five star general who is known for his bravery in battle and commitment to diversity in the armed forces awarded to the fighter pilot over the weekend . <eos>
+We all know that the journalist who writes about business and politics for the local newspaper put on the table during the press conference . <eos>
+I know what your friend who you met recently on a walking tour of the city gave a baguette to Mary last weekend . <eos>
+The accountant wondered who the secretary who we all admire for her wit and strong work ethic introduced a young man to her friend last night . <eos>
+The stewardess told me what the pilot in the dark blue jacket and gold rimmed cap sent a present to his family when we landed . <eos>
+We discovered what the witty actor with the long mustaches and dry sense of humor told an embarrassing story about the hostess during the party . <eos>
+The neighbors found out what the young woman who had always harbored a secret dream of opening a bakery in Paris bought a cake for her fiancee in a rush . <eos>
+My friend knows what the successful architect who was recently awarded a very prestigious contract by the city to design a new museum built a house for her mother last year . <eos>
+The commissioner discovered what the police detective who we all thought was an honest and upright individual handed a wad of cash to the man in the trench coat just a few minutes ago . <eos>
+We all know what the investor who was featured on a prime time television show about how to get the most out of your savings lent a lot of money to his nephew after the housing market crashed . <eos>
+I know what the hapless businessman from the small town in the far north of the country repaid his debt to the mafia kingpin when he had enough money . <eos>
+The newspaper reported what the administrator in the expensive pinstriped suit and the shiny leather shoes promised a good retirement plan to the factory workers during the speech . <eos>
+Her friend found out what the slimy businessman with the slicked back hair and the dangerous looking smile sold a broken car to the unsuspecting couple yesterday . <eos>
+I realized what the foreign visitor from a country on the other side of the world told a joke to the guests over dinner . <eos>
+The novel revealed what the suffering artist who survived on nothing but bread and the occasional bottle of wine penned his new novel about tragic love last winter . <eos>
+We all know what the young politician who believes in justice for all and equity under the law said a few remarks about immigration a week before the primaries . <eos>
+I know what the young professional who majored in anthropology and wrote his thesis on the origins of pasta assembled a fancy meal for his parents last night . <eos>
+My friends all know who the businesswoman who we met yesterday over a fancy lunch in the hotel lobby left her computer in the office this afternoon . <eos>
+The visitor said what the elderly lady in the bright pink dress and wide brimmed straw hat described her morning routine to her friends during the card game . <eos>
+I know who the single mother who lost her husband to a form of severe cancer called her father for advice late at night . <eos>
+The colleagues realized what the human resources officer who works down the hall in a big office with lots of natural light found a spare computer charger for the intern yesterday . <eos>
+She said what the five star general who is known for his bravery in battle and commitment to diversity in the armed forces awarded a medal to the fighter pilot over the weekend . <eos>
+We all know who the journalist who writes about business and politics for the local newspaper put his tape recorder on the table during the press conference . <eos>
+I know what your friend who you met recently on a walking tour of the city gave to Mary last weekend . <eos>
+The accountant wondered who the secretary who we all admire for her wit and strong work ethic introduced to her friend last night . <eos>
+The stewardess told me what the pilot in the dark blue jacket and gold rimmed cap sent to his family when we landed . <eos>
+We discovered what the witty actor with the long mustaches and dry sense of humor told about the hostess during the party . <eos>
+The neighbors found out what the young woman who had always harbored a secret dream of opening a bakery in Paris bought for her fiancee in a rush . <eos>
+My friend knows what the successful architect who was recently awarded a very prestigious contract by the city to design a new museum built for her mother last year . <eos>
+The commissioner discovered what the police detective who we all thought was an honest and upright individual handed to the man in the trench coat just a few minutes ago . <eos>
+We all know what the investor who was featured on a prime time television show about how to get the most out of your savings lent to his nephew after the housing market crashed . <eos>
+I know what the hapless businessman from the small town in the far north of the country repaid to the mafia kingpin when he had enough money . <eos>
+The newspaper reported what the administrator in the expensive pinstriped suit and the shiny leather shoes promised to the factory workers during the speech . <eos>
+Her friend found out what the slimy businessman with the slicked back hair and the dangerous looking smile sold to the unsuspecting couple yesterday . <eos>
+I realized what the foreign visitor from a country on the other side of the world told to the guests over dinner . <eos>
+The novel revealed what the suffering artist who survived on nothing but bread and the occasional bottle of wine penned about tragic love last winter . <eos>
+We all know what the young politician who believes in justice for all and equity under the law said about immigration a week before the primaries . <eos>
+I know what the young professional who majored in anthropology and wrote his thesis on the origins of pasta assembled for his parents last night . <eos>
+My friends all know who the businesswoman who we met yesterday over a fancy lunch in the hotel lobby left in the office this afternoon . <eos>
+The visitor said what the elderly lady in the bright pink dress and wide brimmed straw hat described to her friends during the card game . <eos>
+I know who the single mother who lost her husband to a form of severe cancer called for advice late at night . <eos>
+The colleagues realized what the human resources officer who works down the hall in a big office with lots of natural light found for the intern yesterday . <eos>
+She said what the five star general who is known for his bravery in battle and commitment to diversity in the armed forces awarded to the fighter pilot over the weekend . <eos>
+We all know who the journalist who writes about business and politics for the local newspaper put on the table during the press conference . <eos>
+I know that your friend who you met recently on a walking tour of the city gave a baguette to Mary last weekend . <eos>
+The accountant wondered that the secretary who we all admire for her wit and strong work ethic introduced a young man to her friend last night . <eos>
+The stewardess told me that the pilot in the dark blue jacket and gold rimmed cap sent a present to his family when we landed . <eos>
+We discovered that the witty actor with the long mustaches and dry sense of humor told an embarrassing story about the hostess during the party . <eos>
+The neighbors found out that the young woman who had always harbored a secret dream of opening a bakery in Paris bought a cake for her fiancee in a rush . <eos>
+My friend knows that the successful architect who was recently awarded a very prestigious contract by the city to design a new museum built a house for her mother last year . <eos>
+The commissioner discovered that the police detective who we all thought was an honest and upright individual handed a wad of cash to the man in the trench coat just a few minutes ago . <eos>
+We all know that the investor who was featured on a prime time television show about how to get the most out of your savings lent a lot of money to his nephew after the housing market crashed . <eos>
+I know that the hapless businessman from the small town in the far north of the country repaid his debt to the mafia kingpin when he had enough money . <eos>
+The newspaper reported that the administrator in the expensive pinstriped suit and the shiny leather shoes promised a good retirement plan to the factory workers during the speech . <eos>
+Her friend found out that the slimy businessman with the slicked back hair and the dangerous looking smile sold a broken car to the unsuspecting couple yesterday . <eos>
+I realized that the foreign visitor from a country on the other side of the world told a joke to the guests over dinner . <eos>
+The novel revealed that the suffering artist who survived on nothing but bread and the occasional bottle of wine penned his new novel about tragic love last winter . <eos>
+We all know that the young politician who believes in justice for all and equity under the law said a few remarks about immigration a week before the primaries . <eos>
+I know that the young professional who majored in anthropology and wrote his thesis on the origins of pasta assembled a fancy meal for his parents last night . <eos>
+My friends all know that the businesswoman who we met yesterday over a fancy lunch in the hotel lobby left her computer in the office this afternoon . <eos>
+The visitor said that the elderly lady in the bright pink dress and wide brimmed straw hat described her morning routine to her friends during the card game . <eos>
+I know that the single mother who lost her husband to a form of severe cancer called her father for advice late at night . <eos>
+The colleagues realized that the human resources officer who works down the hall in a big office with lots of natural light found a spare computer charger for the intern yesterday . <eos>
+She said that the five star general who is known for his bravery in battle and commitment to diversity in the armed forces awarded a medal to the fighter pilot over the weekend . <eos>
+We all know that the journalist who writes about business and politics for the local newspaper put his tape recorder on the table during the press conference . <eos>
+I know that your friend who you met recently on a walking tour of the city gave a baguette to last weekend . <eos>
+The accountant wondered that the secretary who we all admire for her wit and strong work ethic introduced a young man to last night . <eos>
+The stewardess told me that the pilot in the dark blue jacket and gold rimmed cap sent a present to when we landed . <eos>
+We discovered that the witty actor with the long mustaches and dry sense of humor told an embarrassing story about during the party . <eos>
+The neighbors found out that the young woman who had always harbored a secret dream of opening a bakery in Paris bought a cake for in a rush . <eos>
+My friend knows that the successful architect who was recently awarded a very prestigious contract by the city to design a new museum built a house for last year . <eos>
+The commissioner discovered that the police detective who we all thought was an honest and upright individual handed a wad of cash to just a few minutes ago . <eos>
+We all know that the investor who was featured on a prime time television show about how to get the most out of your savings lent a lot of money to after the housing market crashed . <eos>
+I know that the hapless businessman from the small town in the far north of the country repaid his debt to when he had enough money . <eos>
+The newspaper reported that the administrator in the expensive pinstriped suit and the shiny leather shoes promised a good retirement plan to during the speech . <eos>
+Her friend found out that the slimy businessman with the slicked back hair and the dangerous looking smile sold a broken car to yesterday . <eos>
+I realized that the foreign visitor from a country on the other side of the world told a joke to over dinner . <eos>
+The novel revealed that the suffering artist who survived on nothing but bread and the occasional bottle of wine penned his new novel about last winter . <eos>
+We all know that the young politician who believes in justice for all and equity under the law said a few remarks about a week before the primaries . <eos>
+I know that the young professional who majored in anthropology and wrote his thesis on the origins of pasta assembled a fancy meal for last night . <eos>
+My friends all know that the businesswoman who we met yesterday over a fancy lunch in the hotel lobby left her computer in this afternoon . <eos>
+The visitor said that the elderly lady in the bright pink dress and wide brimmed straw hat described her morning routine to during the card game . <eos>
+I know that the single mother who lost her husband to a form of severe cancer called her father for late at night . <eos>
+The colleagues realized that the human resources officer who works down the hall in a big office with lots of natural light found a spare computer charger for yesterday . <eos>
+She said that the five star general who is known for his bravery in battle and commitment to diversity in the armed forces awarded a medal to over the weekend . <eos>
+We all know that the journalist who writes about business and politics for the local newspaper put his tape recorder on during the press conference . <eos>
+I know who your friend who you met recently on a walking tour of the city gave a baguette to Mary last weekend . <eos>
+The accountant wondered who the secretary who we all admire for her wit and strong work ethic introduced a young man to her friend last night . <eos>
+The stewardess told me who the pilot in the dark blue jacket and gold rimmed cap sent a present to his family when we landed . <eos>
+We discovered who the witty actor with the long mustaches and dry sense of humor told an embarrassing story about the hostess during the party . <eos>
+The neighbors found out who the young woman who had always harbored a secret dream of opening a bakery in Paris bought a cake for her fiancee in a rush . <eos>
+My friend knows who the successful architect who was recently awarded a very prestigious contract by the city to design a new museum built a house for her mother last year . <eos>
+The commissioner discovered who the police detective who we all thought was an honest and upright individual handed a wad of cash to the man in the trench coat just a few minutes ago . <eos>
+We all know who the investor who was featured on a prime time television show about how to get the most out of your savings lent a lot of money to his nephew after the housing market crashed . <eos>
+I know who the hapless businessman from the small town in the far north of the country repaid his debt to the mafia kingpin when he had enough money . <eos>
+The newspaper reported who the administrator in the expensive pinstriped suit and the shiny leather shoes promised a good retirement plan to the factory workers during the speech . <eos>
+Her friend found out who the slimy businessman with the slicked back hair and the dangerous looking smile sold a broken car to the unsuspecting couple yesterday . <eos>
+I realized who the foreign visitor from a country on the other side of the world told a joke to the guests over dinner . <eos>
+The novel revealed what the suffering artist who survived on nothing but bread and the occasional bottle of wine penned his new novel about tragic love last winter . <eos>
+We all know what the young politician who believes in justice for all and equity under the law said a few remarks about immigration a week before the primaries . <eos>
+I know who the young professional who majored in anthropology and wrote his thesis on the origins of pasta assembled a fancy meal for his parents last night . <eos>
+My friends all know what the businesswoman who we met yesterday over a fancy lunch in the hotel lobby left her computer in the office this afternoon . <eos>
+The visitor said who the elderly lady in the bright pink dress and wide brimmed straw hat described her morning routine to her friends during the card game . <eos>
+I know what the single mother who lost her husband to a form of severe cancer called her father for advice late at night . <eos>
+The colleagues realized who the human resources officer who works down the hall in a big office with lots of natural light found a spare computer charger for the intern yesterday . <eos>
+She said who the five star general who is known for his bravery in battle and commitment to diversity in the armed forces awarded a medal to the fighter pilot over the weekend . <eos>
+We all know what the journalist who writes about business and politics for the local newspaper put his tape recorder on the table during the press conference . <eos>
+I know who your friend who you met recently on a walking tour of the city gave a baguette to last weekend . <eos>
+The accountant wondered who the secretary who we all admire for her wit and strong work ethic introduced a young man to last night . <eos>
+The stewardess told me who the pilot in the dark blue jacket and gold rimmed cap sent a present to when we landed . <eos>
+We discovered who the witty actor with the long mustaches and dry sense of humor told an embarrassing story about during the party . <eos>
+The neighbors found out who the young woman who had always harbored a secret dream of opening a bakery in Paris bought a cake for in a rush . <eos>
+My friend knows who the successful architect who was recently awarded a very prestigious contract by the city to design a new museum built a house for last year . <eos>
+The commissioner discovered who the police detective who we all thought was an honest and upright individual handed a wad of cash to just a few minutes ago . <eos>
+We all know who the investor who was featured on a prime time television show about how to get the most out of your savings lent a lot of money to after the housing market crashed . <eos>
+I know who the hapless businessman from the small town in the far north of the country repaid his debt to when he had enough money . <eos>
+The newspaper reported who the administrator in the expensive pinstriped suit and the shiny leather shoes promised a good retirement plan to during the speech . <eos>
+Her friend found out who the slimy businessman with the slicked back hair and the dangerous looking smile sold a broken car to yesterday . <eos>
+I realized who the foreign visitor from a country on the other side of the world told a joke to over dinner . <eos>
+The novel revealed what the suffering artist who survived on nothing but bread and the occasional bottle of wine penned his new novel about last winter . <eos>
+We all know what the young politician who believes in justice for all and equity under the law said a few remarks about a week before the primaries . <eos>
+I know who the young professional who majored in anthropology and wrote his thesis on the origins of pasta assembled a fancy meal for last night . <eos>
+My friends all know what the businesswoman who we met yesterday over a fancy lunch in the hotel lobby left her computer in this afternoon . <eos>
+The visitor said who the elderly lady in the bright pink dress and wide brimmed straw hat described her morning routine to during the card game . <eos>
+I know what the single mother who lost her husband to a form of severe cancer called her father for late at night . <eos>
+The colleagues realized who the human resources officer who works down the hall in a big office with lots of natural light found a spare computer charger for yesterday . <eos>
+She said who the five star general who is known for his bravery in battle and commitment to diversity in the armed forces awarded a medal to over the weekend . <eos>
+We all know what the journalist who writes about business and politics for the local newspaper put his tape recorder on during the press conference . <eos>

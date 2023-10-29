@@ -1,0 +1,892 @@
+---
+title: "Analysis for Wh + Distance"
+output:
+  pdf_document:
+    latex_engine: xelatex
+---
+```{r}
+rm(list = ls())
+library(tidyverse)
+library(brms)
+library(lme4)
+library(lmerTest)
+library(plotrix)
+library(stringr)
+library(readxl)
+
+remove_na = function(x) {
+  x[!is.na(x)]
+}
+
+REGION_ORDER = c("prefix", "subj", "modifier", "verb", "object", "to", "goal", "temporal_modifier", "End")
+REGION_EXEMPLARS = c("I know who/that", "your friend", "who you admire", "gave", "a baguette", "to", "Mary", "last weekend", ". <eos>")
+NUM_REGIONS = length(REGION_ORDER)
+
+d = read_csv("tests/combined_results.csv") %>%
+  select(-1, -2) %>%
+  mutate(unk=unk == "True") %>%
+  mutate(region=if_else(region=="prefix" | region=="obj wh" | region=="goal wh" | region=="that", "prefix", region)) %>%
+  mutate(region=if_else(region=="short modifier" | region=="medium modifier" | region=="long modifier", "modifier", region),
+             region=factor(region, levels=REGION_ORDER)) %>%
+  separate(condition, sep="_", into=c("wh", "gap", "gap_position", "modifier"))
+
+d_agg = d %>% 
+  group_by(model, region, sent_index, wh, gap, gap_position, modifier) %>% 
+    summarise(surprisal=sum(surprisal),
+              unk=any(unk)) %>%
+    ungroup() %>% 
+  filter(!unk) %>%
+  mutate(wh_numeric=if_else(wh == "wh", 1, -1),
+         wh=factor(wh, levels=c("wh", "that")),
+         gap=factor(gap, levels=c("gap", "no-gap")),
+         gap_position=factor(gap_position, levels=c("obj", "goal")),
+         modifier=factor(modifier, levels=c("no-mod", "short-mod", "med-mod", "long-mod")))
+
+```
+
+### Visualization for the Gulordava model
+
+```{r}
+
+d_agg %>%
+  filter(model == "gulordava") %>%
+  filter(gap_position == "obj") %>%
+  select(-wh_numeric) %>%
+  spread(wh, surprisal) %>%
+  mutate(wh_effect=wh-`that`) %>%
+  group_by(region, gap, modifier) %>%
+    summarise(m=mean(wh_effect),
+              s=std.error(wh_effect),
+              upper=m + 1.96*s,
+              lower=m - 1.96*s) %>%
+    ungroup() %>%
+  mutate(region=as.numeric(region)) %>% 
+  ggplot(aes(x=region, y=m, ymax=upper, ymin=lower, linetype=gap, color=modifier)) +
+    geom_line() +
+    geom_errorbar(linetype="solid", width=.1) +
+    scale_x_continuous(breaks=seq(1, NUM_REGIONS), labels=REGION_EXEMPLARS) +
+    theme(axis.text.x = element_text(angle=45, hjust=1)) +
+    xlab("Words") +
+    ylab("Sum surprisal in region") 
+
+```
+It's a little hard to tell what's going on because there are so many conditions, but this seems to indicate that length is not playing a major role in determining licensing effects. We see that in the no-modifier condition there is a bigger negative wh-effect in the gapped condition (that is, when there is a gap, the presence of a wh word really decreases surprisal). But there doesn't seem to be a difference between the short, medium and long modifiers. And in the opposite direction, in the non-gap condition the presence of a wh-word doesn't seem to add anything to surprisal. So maybe there is a small one-way effect, but not really an interaction.
+
+```{r}
+
+d_agg %>%
+  filter(model == "gulordava") %>%
+  filter(gap_position == "goal") %>%
+  select(-wh_numeric) %>%
+  spread(wh, surprisal) %>%
+  mutate(wh_effect=wh-`that`) %>%
+  group_by(region, gap, modifier) %>%
+    summarise(m=mean(wh_effect),
+              s=std.error(wh_effect),
+              upper=m + 1.96*s,
+              lower=m - 1.96*s) %>%
+    ungroup() %>%
+  mutate(region=as.numeric(region)) %>% 
+  ggplot(aes(x=region, y=m, ymax=upper, ymin=lower, linetype=gap, color=modifier)) +
+    geom_line() +
+    geom_errorbar(linetype="solid", width=.1) +
+    scale_x_continuous(breaks=seq(1, NUM_REGIONS), labels=REGION_EXEMPLARS) +
+    theme(axis.text.x = element_text(angle=45, hjust=1)) +
+    xlab("Words") +
+    ylab("Sum surprisal in region") 
+
+```
+
+Again, we see a one-way direction, negativally, that we saw before, but it's hard to tell just how significant it may be.
+
+### Visualization for the Google model
+
+```{r}
+
+d_agg %>%
+  filter(model == "google") %>%
+  filter(gap_position == "obj") %>%
+  select(-wh_numeric) %>%
+  spread(wh, surprisal) %>%
+  mutate(wh_effect=wh-`that`) %>%
+  group_by(region, gap, modifier) %>%
+    summarise(m=mean(wh_effect),
+              s=std.error(wh_effect),
+              upper=m + 1.96*s,
+              lower=m - 1.96*s) %>%
+    ungroup() %>%
+  mutate(region=as.numeric(region)) %>% 
+  ggplot(aes(x=region, y=m, ymax=upper, ymin=lower, linetype=gap, color=modifier)) +
+    geom_line() +
+    geom_errorbar(linetype="solid", width=.1) +
+    scale_x_continuous(breaks=seq(1, NUM_REGIONS), labels=REGION_EXEMPLARS) +
+    theme(axis.text.x = element_text(angle=45, hjust=1)) +
+    xlab("Words") +
+    ylab("Sum surprisal in region") 
+
+```
+Again, we see a similar effect as before. In the post-gap material, there isn't much of a correlation between modifier length and wh-effect, either in the negative direction for the gapped case or in the positive irection for the non-gapped case.
+
+
+```{r}
+
+d_agg %>%
+  filter(model == "google") %>%
+  filter(gap_position == "goal") %>%
+  select(-wh_numeric) %>%
+  spread(wh, surprisal) %>%
+  mutate(wh_effect=wh-`that`) %>%
+  group_by(region, gap, modifier) %>%
+    summarise(m=mean(wh_effect),
+              s=std.error(wh_effect),
+              upper=m + 1.96*s,
+              lower=m - 1.96*s) %>%
+    ungroup() %>%
+  mutate(region=as.numeric(region)) %>% 
+  ggplot(aes(x=region, y=m, ymax=upper, ymin=lower, linetype=gap, color=modifier)) +
+    geom_line() +
+    geom_errorbar(linetype="solid", width=.1) +
+    scale_x_continuous(breaks=seq(1, NUM_REGIONS), labels=REGION_EXEMPLARS) +
+    theme(axis.text.x = element_text(angle=45, hjust=1)) +
+    xlab("Words") +
+    ylab("Sum surprisal in region") 
+
+```
+
+And again, we see similar things going on.
+
+## Analysis 1: Gap in object position
+
+Okay, let's do a quick visualization to see what's going on here.
+
+```{r}
+d2 = d_agg %>%
+  filter(model=="google") %>%
+  filter(gap_position=="obj") %>%
+  filter(region == "to" | region=="goal") %>%
+  group_by(model, wh, gap, modifier) %>%
+    summarise(m=mean(surprisal),
+              s=std.error(surprisal),
+              upper=m + 1.96*s,
+              lower=m - 1.96*s) %>%
+    ungroup()
+
+ggplot(d2, aes(x=wh, y=m, ymin=lower, ymax=upper, fill=gap)) +
+    geom_bar(stat="identity", position="dodge") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~modifier) 
+```
+```{r}
+d2 = d_agg %>%
+  filter(model=="gulordava") %>%
+  filter(gap_position=="obj") %>%
+  filter(region == "to" | region=="goal") %>%
+  group_by(model, wh, gap, modifier) %>%
+    summarise(m=mean(surprisal),
+              s=std.error(surprisal),
+              upper=m + 1.96*s,
+              lower=m - 1.96*s) %>%
+    ungroup()
+
+ggplot(d2, aes(x=wh, y=m, ymin=lower, ymax=upper, fill=gap)) +
+    geom_bar(stat="identity", position="dodge") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~modifier) 
+```
+Great, this is good evidence for filler effects in the google model. We see that with no modifiers, there is higher surprisal in the that/gap condition compared to the that/no-gap condition, but about equal surprisal when there is a wh-licensor. Again, the model is learning half of the dependency. However, with the inclusion of intervening material, the wh condition starts to look more and more like the "that" condition, with lower surprisal in the no-gap case than when a gap is present. It seems as if inclusion of intervening material resets the network, making it "forget" that a gap has been licensed by a wh-word earlier in the sentence.
+
+```{r}
+d_wh_effect = d_agg %>%
+  filter(region == "to" | region =="goal") %>%
+  filter(gap_position=="obj") %>%
+  select(-wh_numeric) %>%
+  spread(wh, surprisal) %>%
+  mutate(wh_effect=wh-`that`) 
+
+d_wh_effect %>% 
+  group_by(model, gap, gap_position, modifier) %>%
+    summarise(m=mean(wh_effect),
+              s=std.error(wh_effect),
+              upper=m+1.96*s,
+              lower=m-1.96*s) %>%
+    ungroup() %>%
+  ggplot(aes(x=gap, y=m, ymin=lower, ymax=upper, fill=modifier)) +
+    geom_bar(stat="identity", position="dodge") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~model)
+
+```
+
+As we would expect, there is much less surprsial when the gap is licensed by a wh-word as opposed to "that". It seems that for the Gulordava model there is an effect of distance (i.e. the gap between the two gets smaller the more mateiral is added), although we can't really tell if it is significant from the graph. For the google model it looks as if the results are more mixed. While it's obvious the no-gap condition is going to show the biggest reduction in surprisal, it's not obvious that the long-modifier condition is any worse than the medium modifier condition.
+
+Let's plot the difference:
+
+```{r}
+d_full_interaction = d_agg %>%
+  filter(region == "to" | region == "goal") %>%
+  filter(gap_position=="obj") %>%
+  select(-wh_numeric) %>%
+  spread(gap, surprisal) %>%
+  mutate(gap_effect=`no-gap`-gap) %>%
+  select(-unk, -gap, -`no-gap`) %>%
+  spread(wh, gap_effect) %>%
+  mutate(wh_interaction=wh-`that`) 
+
+d_full_interaction %>%
+  group_by(model, modifier) %>%
+    summarise(m=mean(wh_interaction, na.rm=T),
+              s=std.error(wh_interaction, na.rm=T),
+              upper=m+1.96*s,
+              lower=m-1.96*s) %>%
+    ungroup() %>%
+  ggplot(aes(x=modifier, y=m, ymin=lower, ymax=upper, fill=modifier)) +
+    geom_bar(stat="identity") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~model) 
+
+```
+
+Statistics:
+
+```{r}
+m_google = d_agg %>%
+  filter(model == "google", region == "to" | region=="goal", gap_position=="obj") %>%
+  lmer(surprisal ~ gap * wh_numeric * modifier + 
+                  (gap+wh_numeric+modifier|sent_index), 
+                data=.)
+summary(m_google)
+
+m_gul = d_agg %>%
+  filter(model == "gulordava", region == "to" | region=="goal", gap_position=="obj") %>%
+  lmer(surprisal ~ gap * wh_numeric * modifier+ 
+                  (gap+wh_numeric+modifier|sent_index), 
+                data=.)
+summary(m_gul)
+
+```
+
+So this says that there is nothing significant in the object position gaps. This goes a little bit against my intuition, based on the graphs plotted above, where the error bars seem well above 0 for the wh/gap interaction. 
+
+# Gap in indirect object / PP position
+
+```{r}
+d2 = d_agg %>%
+  filter(model=="google") %>%
+  filter(gap_position=="goal") %>%
+  filter(region == "temporal_modifier") %>%
+  group_by(model, wh, gap, modifier) %>%
+    summarise(m=mean(surprisal),
+              s=std.error(surprisal),
+              upper=m + 1.96*s,
+              lower=m - 1.96*s) %>%
+    ungroup()
+
+ggplot(d2, aes(x=wh, y=m, ymin=lower, ymax=upper, fill=gap)) +
+    geom_bar(stat="identity", position="dodge") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~modifier) 
+```
+
+```{r}
+d2 = d_agg %>%
+  filter(model=="gulordava") %>%
+  filter(gap_position=="goal") %>%
+  filter(region == "temporal_modifier") %>%
+  group_by(model, wh, gap, modifier) %>%
+    summarise(m=mean(surprisal),
+              s=std.error(surprisal),
+              upper=m + 1.96*s,
+              lower=m - 1.96*s) %>%
+    ungroup()
+
+ggplot(d2, aes(x=wh, y=m, ymin=lower, ymax=upper, fill=gap)) +
+    geom_bar(stat="identity", position="dodge") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~modifier) 
+```
+
+Again we see something very similar to the object gap case. Surprisal between gap and no-gap is about the same in "no modifier" condition when a wh-word is present, but different when it is not.
+
+```{r}
+d_wh_effect = d_agg %>%
+  filter(region == "temporal_modifier") %>%
+  filter(gap_position=="goal") %>%
+  select(-wh_numeric) %>%
+  spread(wh, surprisal) %>%
+  mutate(wh_effect=wh-`that`) 
+
+d_wh_effect %>% 
+  group_by(model, gap, gap_position, modifier) %>%
+    summarise(m=mean(wh_effect),
+              s=std.error(wh_effect),
+              upper=m+1.96*s,
+              lower=m-1.96*s) %>%
+    ungroup() %>%
+  ggplot(aes(x=gap, y=m, ymin=lower, ymax=upper, fill=modifier)) +
+    geom_bar(stat="identity", position="dodge") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~model)
+
+```
+
+What this shows is that with the pp/goal licensing, when there is a gap, the presence of a wh-word does less to reduce surprisal the further it is away from that gap. It seems, however, that in the no-gap condition, the presence or absence of a wh licensor doesn't really change the surprisal of the network. 
+
+```{r}
+d_full_interaction = d_agg %>%
+  filter(region == "temporal_modifier") %>%
+  filter(gap_position=="goal") %>%
+  select(-wh_numeric) %>%
+  spread(gap, surprisal) %>%
+  mutate(gap_effect=`no-gap`-gap) %>%
+  select(-unk, -gap, -`no-gap`) %>%
+  spread(wh, gap_effect) %>%
+  mutate(wh_interaction=wh-`that`) 
+
+d_full_interaction %>%
+  group_by(model, modifier) %>%
+    summarise(m=mean(wh_interaction, na.rm=T),
+              s=std.error(wh_interaction, na.rm=T),
+              upper=m+1.96*s,
+              lower=m-1.96*s) %>%
+    ungroup() %>%
+  ggplot(aes(x=modifier, y=m, ymin=lower, ymax=upper, fill=modifier)) +
+    geom_bar(stat="identity") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~model) 
+```
+
+Great! This shows very nice decreasing effects of licensing given gap distance in both models, with the google model showing larger licensing effects overall than the gulordava model.
+
+```{r}
+m_google = d_agg %>%
+  filter(model == "google", region == "temporal_modifier", gap_position=="goal") %>%
+  lmer(surprisal ~ gap * wh_numeric * modifier+ 
+                  (gap+wh_numeric+modifier|sent_index), 
+                data=.)
+summary(m_google)
+
+m_gul = d_agg %>%
+  filter(model == "gulordava", region == "temporal_modifier", gap_position=="goal") %>%
+  lmer(surprisal ~ gap * wh_numeric * modifier+ 
+                  (gap+wh_numeric+modifier|sent_index), 
+                data=.)
+summary(m_gul)
+
+```
+
+Unlike in the case of gaps in object position, when the gap is in pp/goal position we start to see some significant effects. Particularly (as we predicted) there is an interaction between gaps and wh-words, such that when you have no gap, but you do have a wh-licensor there is a significant increase in surprisal by about 1 bit of information. Also important, we see an interaction between gaps/wh-licensors and distance. In the google model the interaction is only significiant when the modifier is long, which is what we predicted. In the gulordava model we see a significant interaction in both the long and medium filler cases, but the significance is greater and the effect size is bigger in the long case. (Although the difference in effect size is only about 0.1 bits of surprisal.)
+
+Now instead of looking at surprisal directly post-gap, we move on to the entire embedded region.
+
+# Surprisal in the entire embedded region
+
+```{r}
+remove_na = function(x) {
+  x[!is.na(x)]
+}
+
+d = read_csv("tests/combined_results.csv") %>%
+  select(-1, -2) %>%
+  mutate(unk=unk == "True") %>%
+  mutate(region=if_else(region=="prefix" | region=="obj wh" | region=="goal wh" | region=="that", "prefix", region)) %>%
+  mutate(region=if_else(region=="short modifier" | region=="medium modifier" | region=="long modifier" | region =="subj" | region =="verb" | region == "object" | region == "to" | region =="goal" | region == "temporal_modifier" | region == "End", "embed", region)) %>%
+  separate(condition, sep="_", into=c("wh", "gap", "gap_position", "modifier"))
+
+d_agg = d %>% 
+  group_by(model, region, sent_index, wh, gap, gap_position, modifier) %>% 
+    summarise(surprisal=sum(surprisal),
+              unk=any(unk)) %>%
+    ungroup() %>% 
+  filter(!unk) %>%
+  mutate(wh_numeric=if_else(wh == "wh", 1, -1),
+         wh=factor(wh, levels=c("wh", "that")),
+         gap=factor(gap, levels=c("gap", "no-gap")),
+         gap_position=factor(gap_position, levels=c("obj", "goal")),
+         modifier=factor(modifier, levels=c("no-mod", "short-mod", "med-mod", "long-mod")))
+```
+
+Okay, let's do a quick visualization to see what's going on here.
+
+```{r}
+d2 = d_agg %>%
+  filter(model=="google") %>%
+  filter(region=="embed") %>%
+  filter(gap_position=="obj") %>%
+  group_by(model, wh, gap, modifier) %>%
+    summarise(m=mean(surprisal),
+              s=std.error(surprisal),
+              upper=m + 1.96*s,
+              lower=m - 1.96*s) %>%
+    ungroup()
+
+ggplot(d2, aes(x=wh, y=m, ymin=lower, ymax=upper, fill=gap)) +
+    geom_bar(stat="identity", position="dodge") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~modifier) 
+```
+```{r}
+d2 = d_agg %>%
+  filter(model=="gulordava") %>%
+    filter(region=="embed") %>%
+  filter(gap_position=="obj") %>%
+  group_by(model, wh, gap, modifier) %>%
+    summarise(m=mean(surprisal),
+              s=std.error(surprisal),
+              upper=m + 1.96*s,
+              lower=m - 1.96*s) %>%
+    ungroup()
+
+ggplot(d2, aes(x=wh, y=m, ymin=lower, ymax=upper, fill=gap)) +
+    geom_bar(stat="identity", position="dodge") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~modifier) 
+```
+
+From first glance it does not look like any of the effects we observed in the above sections have translated into effects for the entire embedded region. In all conditions it looks like the "no-gap" surprisal is higher.
+
+```{r}
+d_wh_effect = d_agg %>%
+  filter(gap_position=="obj") %>%
+    filter(region=="embed") %>%
+  select(-wh_numeric) %>%
+  spread(wh, surprisal) %>%
+  mutate(wh_effect=wh-`that`) 
+
+d_wh_effect %>% 
+  group_by(model, gap, gap_position, modifier) %>%
+    summarise(m=mean(wh_effect),
+              s=std.error(wh_effect),
+              upper=m+1.96*s,
+              lower=m-1.96*s) %>%
+    ungroup() %>%
+  ggplot(aes(x=gap, y=m, ymin=lower, ymax=upper, fill=modifier)) +
+    geom_bar(stat="identity", position="dodge") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~model)
+
+```
+
+```{r}
+d_full_interaction = d_agg %>%
+  filter(region=="embed") %>%
+  filter(gap_position=="obj") %>%
+  select(-wh_numeric) %>%
+  spread(gap, surprisal) %>%
+  mutate(gap_effect=`no-gap`-gap) %>%
+  select(-unk, -gap, -`no-gap`) %>%
+  spread(wh, gap_effect) %>%
+  mutate(wh_interaction=wh-`that`) 
+
+d_full_interaction %>%
+  group_by(model, modifier) %>%
+    summarise(m=mean(wh_interaction, na.rm=T),
+              s=std.error(wh_interaction, na.rm=T),
+              upper=m+1.96*s,
+              lower=m-1.96*s) %>%
+    ungroup() %>%
+  ggplot(aes(x=modifier, y=m, ymin=lower, ymax=upper, fill=modifier)) +
+    geom_bar(stat="identity") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~model) 
+
+```
+
+Statistics:
+
+```{r}
+m_google = d_agg %>%
+  filter(model == "google", region == "embed", gap_position=="obj") %>%
+  lmer(surprisal ~ gap * wh_numeric * modifier+ 
+                  (gap+wh_numeric+modifier|sent_index), 
+                data=.)
+summary(m_google)
+
+m_gul = d_agg %>%
+  filter(model == "gulordava", region == "embed", gap_position=="obj") %>%
+  lmer(surprisal ~ gap * wh_numeric * modifier+ 
+                  (gap+wh_numeric+modifier|sent_index), 
+                data=.)
+summary(m_gul)
+
+```
+
+So it appears that the interaction of the filler/gap dependency does actually have a significant effect on surprisal and, unlike when we measured just the post-gap material, it also translates into a significant three-way interaction between gap,wh-word and length. In this case, the long modifier has a more significant and greater effect (although we do not test here whether the difference is effect is significant).
+
+## Now for the pp/goal position gap
+
+```{r}
+d2 = d_agg %>%
+  filter(model=="google") %>%
+  filter(region=="embed") %>%
+  filter(gap_position=="goal") %>%
+  group_by(model, wh, gap, modifier) %>%
+    summarise(m=mean(surprisal),
+              s=std.error(surprisal),
+              upper=m + 1.96*s,
+              lower=m - 1.96*s) %>%
+    ungroup()
+
+ggplot(d2, aes(x=wh, y=m, ymin=lower, ymax=upper, fill=gap)) +
+    geom_bar(stat="identity", position="dodge") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~modifier) 
+```
+```{r}
+d2 = d_agg %>%
+  filter(model=="gulordava") %>%
+    filter(region=="embed") %>%
+  filter(gap_position=="goal") %>%
+  group_by(model, wh, gap, modifier) %>%
+    summarise(m=mean(surprisal),
+              s=std.error(surprisal),
+              upper=m + 1.96*s,
+              lower=m - 1.96*s) %>%
+    ungroup()
+
+ggplot(d2, aes(x=wh, y=m, ymin=lower, ymax=upper, fill=gap)) +
+    geom_bar(stat="identity", position="dodge") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~modifier) 
+```
+
+```{r}
+d_wh_effect = d_agg %>%
+  filter(gap_position=="goal") %>%
+    filter(region=="embed") %>%
+  select(-wh_numeric) %>%
+  spread(wh, surprisal) %>%
+  mutate(wh_effect=wh-`that`) 
+
+d_wh_effect %>% 
+  group_by(model, gap, gap_position, modifier) %>%
+    summarise(m=mean(wh_effect),
+              s=std.error(wh_effect),
+              upper=m+1.96*s,
+              lower=m-1.96*s) %>%
+    ungroup() %>%
+  ggplot(aes(x=gap, y=m, ymin=lower, ymax=upper, fill=modifier)) +
+    geom_bar(stat="identity", position="dodge") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~model)
+
+```
+
+In every instance you get more surprisal for the presence of a wh-word, although (at least for the google model you get much more surprisal for a no-gap than a gap). Maybe this just means that, in general, it's more difficult for the network to process wh-headed relative clauses.
+
+
+```{r}
+d_full_interaction = d_agg %>%
+  filter(region=="embed") %>%
+  filter(gap_position=="goal") %>%
+  select(-wh_numeric) %>%
+  spread(gap, surprisal) %>%
+  mutate(gap_effect=`no-gap`-gap) %>%
+  select(-unk, -gap, -`no-gap`) %>%
+  spread(wh, gap_effect) %>%
+  mutate(wh_interaction=wh-`that`) 
+
+d_full_interaction %>%
+  group_by(model, modifier) %>%
+    summarise(m=mean(wh_interaction, na.rm=T),
+              s=std.error(wh_interaction, na.rm=T),
+              upper=m+1.96*s,
+              lower=m-1.96*s) %>%
+    ungroup() %>%
+  ggplot(aes(x=modifier, y=m, ymin=lower, ymax=upper, fill=modifier)) +
+    geom_bar(stat="identity") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~model) 
+
+```
+
+Statistics:
+
+```{r}
+m_google = d_agg %>%
+  filter(model == "google", region == "embed", gap_position=="goal") %>%
+  lmer(surprisal ~ gap * wh_numeric * modifier+ 
+                  (gap+wh_numeric+modifier|sent_index), 
+                data=.)
+summary(m_google)
+
+m_gul = d_agg %>%
+  filter(model == "gulordava", region == "embed", gap_position=="goal") %>%
+  lmer(surprisal ~ gap * wh_numeric * modifier+ 
+                  (gap+wh_numeric+modifier|sent_index), 
+                data=.)
+summary(m_gul)
+
+```
+
+In both cases, we see the interaction we expect between wh-words and gaps, where there is significantly higher surprisal when there is no gap and a wh-word. However, (for the google model) we also see a significant interaction between the gap, wh-word and modifier. When no gap and a wh-word is present the modifiers significantly increase surprisal. 
+
+## Distance as a continuous variable. Post gap material
+
+```{r}
+d = read_csv("tests/combined_results.csv") %>%
+  select(-1, -2) %>%
+  mutate(unk=unk == "True") %>%
+  mutate(region=if_else(region=="prefix" | region=="obj wh" | region=="goal wh" | region=="that", "prefix", region)) %>%
+  mutate(region=if_else(region=="short modifier" | region=="medium modifier" | region=="long modifier", "modifier", region)) %>%
+  separate(condition, sep="_", into=c("wh", "gap", "gap_position", "modifier"))
+
+d_agg = d %>%
+  group_by(model, region, sent_index, wh, gap, gap_position, modifier) %>%
+    summarise(surprisal=sum(surprisal), unk=any(unk), distance=n()) %>%
+    ungroup() %>% 
+  filter(!unk) %>%
+  mutate(wh_numeric=if_else(wh == "wh", 1, -1),
+         wh=factor(wh, levels=c("wh", "that")),
+         gap=factor(gap, levels=c("gap", "no-gap")),
+         gap_position=factor(gap_position, levels=c("obj", "goal")),
+         modifier=factor(modifier, levels=c("no-mod", "short-mod", "med-mod", "long-mod")))
+```
+
+```{r}
+d_len = d_agg %>%
+  mutate(region2 = region) %>% #So when we spread region we still have the region information
+  mutate(modifier2 = modifier) %>% #Because modifier is both a name of our condition and a region!
+  spread(region, distance) %>%
+  
+  group_by(sent_index, wh, gap, gap_position, wh_numeric, modifier2) %>%
+    fill(c("End", "goal", "modifier", "object", "prefix", "subj", "temporal_modifier", "to", "verb"), .direction = c("down"))%>%
+    fill(c("End", "goal", "modifier", "object", "prefix", "subj", "temporal_modifier", "to", "verb"), .direction = c("up"))%>%
+    ungroup()%>%
+    mutate_if(is.numeric , replace_na, replace = 0) %>%
+  
+  select(-object, -End, -goal, -prefix, -subj, -temporal_modifier, -to, -verb) %>%
+  filter(region2 == "to")
+  
+d_dist = d_len %>%
+  group_by(model, sent_index, wh, gap, gap_position, modifier2, modifier) %>%
+    summarise(total_surprisal = sum(surprisal)) %>%
+    ungroup() %>%
+  
+  filter(gap_position=="obj") %>%
+  spread(gap, total_surprisal) %>%
+  mutate(gap_effect=`no-gap`-gap) %>%
+  select(-gap, -`no-gap`) %>%
+  spread(wh, gap_effect) %>%
+  mutate(wh_interaction=wh-`that`) 
+
+d_dist %>%
+  filter(model == "google" | model == "gulordava") %>%
+  ggplot(aes(x=modifier, y=wh_interaction)) +
+    geom_point() +
+    stat_smooth(method='lm') +
+    facet_wrap(~model) +
+    ylab("Licensing Interaction") +
+    xlab("Length of Modifier in Words") +
+    ggtitle("Obj Position, Post-Gap Material") +
+    facet_wrap(~model) +
+    geom_hline(yintercept=0, color="red", alpha=0.5)
+
+ggsave("~/Desktop/island-graphs/length-postgap-obj.pdf",height=2.5,width=3.5)
+
+```
+
+```{r}
+d_len = d_len %>%
+  mutate(wh=if_else(wh == "wh", 1, -1)) %>%
+  mutate(gap=if_else(gap == "gap", 1, -1))
+
+goog_freq = d_len %>%
+  filter(model == "google") %>%
+  lmer(surprisal ~ wh * gap * modifier + (wh + gap + modifier  |sent_index), data=.)
+summary(goog_freq)
+
+gul_freq = d_len %>%
+  filter(model == "gulordava") %>%
+  lmer(surprisal ~ wh * gap * modifier + (wh + gap + modifier |sent_index), data=.)
+summary(gul_freq)
+
+```
+
+Okay, so it looks like theres a significant but very minimal correlation between length of intervening phrase and efficacy of wh-licensing when we look at immediate post-gap material in the object position. Now let's look at the pp / indirect object position.
+
+
+```{r}
+d_len = d_agg %>%
+  mutate(region2 = region) %>% #So when we spread region we still have the region information
+  mutate(modifier2 = modifier) %>% #Because modifier is both a name of our condition and a region!
+  spread(region, distance) %>%
+  
+  group_by(sent_index, wh, gap, gap_position, wh_numeric, modifier2) %>%
+    fill(c("End", "goal", "modifier", "object", "prefix", "subj", "temporal_modifier", "to", "verb"), .direction = c("down"))%>%
+    fill(c("End", "goal", "modifier", "object", "prefix", "subj", "temporal_modifier", "to", "verb"), .direction = c("up"))%>%
+    ungroup()%>%
+    mutate_if(is.numeric , replace_na, replace = 0) %>%
+  
+  select(-object, -End, -goal, -prefix, -subj, -temporal_modifier, -to, -verb) %>%
+  filter(region2 == "End") 
+
+d_dist = d_len %>%
+  select(-wh_numeric) %>%
+  filter(gap_position=="goal") %>%
+  spread(gap, surprisal) %>%
+  mutate(gap_effect=`no-gap`-gap) %>%
+  select(-gap, -`no-gap`) %>%
+  spread(wh, gap_effect) %>%
+  mutate(wh_interaction=wh-`that`) 
+
+d_dist %>%
+  filter(model == "google" | model == "gulordava") %>%
+  ggplot(aes(x=modifier, y=wh_interaction)) +
+    geom_point() +
+    stat_smooth(method='lm') +
+    facet_wrap(~model) +
+    ylab("Licensing Interaction") +
+    xlab("Length of Modifier in Words") +
+    ggtitle("Goal Position, Post-Gap Material") +
+    facet_wrap(~model) +
+    geom_hline(yintercept=0, color="red", alpha=0.5)
+ggsave("~/Desktop/island-graphs/length-postgap-goal.pdf",height=2.5,width=3.5)
+
+```
+```{r}
+d_len = d_len %>%
+  mutate(wh=if_else(wh == "wh", 1, -1)) %>%
+  mutate(gap=if_else(gap == "gap", 1, -1))
+
+goog_freq = d_len %>%
+  filter(model == "google") %>%
+  lmer(surprisal ~ wh * gap * modifier + (wh + gap|sent_index), data=.)
+summary(goog_freq)
+
+gul_freq = d_len %>%
+  filter(model == "gulordava") %>%
+  lmer(surprisal ~ wh * gap * modifier + (wh + gap|sent_index), data=.)
+summary(gul_freq)
+```
+
+Okay, in this case there's no significant correlation in the google model and a negative, but very very small and berely significant correlation in the gulordava model.
+
+## Continuous variable entire embedded region
+
+For the object gap
+
+```{r}
+d_len = d_agg %>%
+  mutate(region2 = region) %>% #So when we spread region we still have the region information
+  mutate(modifier2 = modifier) %>% #Because modifier is both a name of our condition and a region!
+  spread(region, distance) %>%
+  
+  group_by(sent_index, wh, gap, gap_position, wh_numeric, modifier2) %>%
+    fill(c("End", "goal", "modifier", "object", "prefix", "subj", "temporal_modifier", "to", "verb"), .direction = c("down"))%>%
+    fill(c("End", "goal", "modifier", "object", "prefix", "subj", "temporal_modifier", "to", "verb"), .direction = c("up"))%>%
+    ungroup()%>%
+    mutate_if(is.numeric , replace_na, replace = 0) %>%
+  
+  select( -object, -End, -goal, -prefix, -subj, -temporal_modifier, -to, -verb) %>%
+  filter(region2 == "subj" | region2 == "verb" | region2 == "to" | region2 == "goal" | region2 == "modifier" | region2 == "object" | region2 == "object") %>%
+  
+  group_by(model, sent_index, wh, gap, gap_position, modifier2, modifier) %>%
+    summarise(total_surprisal = sum(surprisal)) %>%
+    ungroup() %>%
+  filter(gap_position=="obj")
+
+  
+d_dist = d_len %>%
+  spread(gap, total_surprisal) %>%
+  mutate(gap_effect=`no-gap`-gap) %>%
+  select(-gap, -`no-gap`) %>%
+  spread(wh, gap_effect) %>%
+  mutate(wh_interaction=wh-`that`) 
+
+d_dist %>%
+  filter(model == "google" | model == "gulordava") %>%
+  ggplot(aes(x=modifier, y=wh_interaction)) +
+    geom_point() +
+    stat_smooth(method='lm') +
+    facet_wrap(~model) +
+    ylab("Licensing Interaction") +
+    xlab("Length of Modifier in Words") +
+    ggtitle("Obj Position, Whole Clause") +
+    facet_wrap(~model)+
+    geom_hline(yintercept=0, color="red", alpha=0.5)
+ggsave("~/Desktop/island-graphs/length-wholeclause-obj.pdf",height=2.5,width=3.5)
+
+```
+
+```{r}
+d_len = d_len %>%
+  mutate(wh=if_else(wh == "wh", 1, -1)) %>%
+  mutate(gap=if_else(gap == "gap", 1, -1))
+
+goog_freq = d_len %>%
+  filter(model == "google") %>%
+  lmer(total_surprisal ~ wh * gap * modifier + (wh + gap + modifier |sent_index), data=.)
+summary(goog_freq)
+
+gul_freq = d_len %>%
+  filter(model == "gulordava") %>%
+  lmer(total_surprisal ~ wh * gap * modifier + (1|sent_index), data=.)
+summary(gul_freq)
+```
+
+Okay, we see nothing in the case of google and a highly significant but tiny correlation in the case of hte gulordava model. 
+
+For the goal gap
+
+```{r}
+d_len = d_agg %>%
+  mutate(region2 = region) %>% #So when we spread region we still have the region information
+  mutate(modifier2 = modifier) %>% #Because modifier is both a name of our condition and a region!
+  spread(region, distance) %>%
+  
+  group_by(sent_index, wh, gap, gap_position, wh_numeric, modifier2) %>%
+    fill(c("End", "goal", "modifier", "object", "prefix", "subj", "temporal_modifier", "to", "verb"), .direction = c("down"))%>%
+    fill(c("End", "goal", "modifier", "object", "prefix", "subj", "temporal_modifier", "to", "verb"), .direction = c("up"))%>%
+    ungroup()%>%
+    mutate_if(is.numeric , replace_na, replace = 0) %>%
+
+  select(-wh_numeric, -object, -End, -goal, -prefix, -subj, -temporal_modifier, -to, -verb) %>%
+  filter(region2 == "subj" | region2 == "verb" | region2 == "to" | region2 == "goal" | region2 == "modifier" | region2 == "object") %>%
+  
+  group_by(model, sent_index, wh, gap, gap_position, modifier2, modifier) %>%
+    summarise(total_surprisal = sum(surprisal)) %>%
+    ungroup() %>%
+  filter(gap_position=="goal")
+
+d_dist = d_len %>%
+  spread(gap, total_surprisal) %>%
+  mutate(gap_effect=`no-gap`-gap) %>%
+  select(-gap, -`no-gap`) %>%
+  spread(wh, gap_effect) %>%
+  mutate(wh_interaction=wh-`that`) 
+
+d_dist %>%
+  filter(model == "google" | model == "gulordava") %>%
+  ggplot(aes(x=modifier, y=wh_interaction)) +
+    geom_point() +
+    stat_smooth(method='lm') +
+    facet_wrap(~model) +
+    ylab("Licensing Interaction") +
+    xlab("Length of Modifier in Words") +
+    ggtitle("Goal Position, Whole Clause") +
+    facet_wrap(~model) +
+    geom_hline(yintercept=0, color="red", alpha=0.5)
+ggsave("~/Desktop/island-graphs/length-wholeclause-goal.pdf",height=2.5,width=3.5)
+
+```
+
+```{r}
+d_len = d_len %>%
+  mutate(wh=if_else(wh == "wh", 1, -1)) %>%
+  mutate(gap=if_else(gap == "gap", 1, -1))
+
+goog_freq = d_len %>%
+  filter(model == "google") %>%
+  lmer(total_surprisal ~ wh * gap * modifier + (wh + gap + modifier |sent_index), data=.)
+summary(goog_freq)
+
+gul_freq = d_len %>%
+  filter(model == "gulordava") %>%
+  lmer(total_surprisal ~ wh * gap * modifier + (wh + gap + modifier |sent_index), data=.)
+summary(gul_freq)
+```
+
+Here we actually see a significant increase in licensing effect with distance in the google model (opposite of what we would expect) and nothing in the gulordava model.
+
+All in all, there's good evidence that length can effect licensing in the post gap material for the object position, but it looks like it's not having much of an effect on the pp / goal position. I would say that over all, length does not seem to be a significant factor in the network's ability to license filler / gap dependencies.
+

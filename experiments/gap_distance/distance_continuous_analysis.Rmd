@@ -1,0 +1,309 @@
+---
+title: "Analysis for Distance as a Continuous Variable"
+output:
+  pdf_document:
+    latex_engine: xelatex
+---
+
+## Distance as a continuous variable. Post gap material
+
+```{r}
+d = read_csv("tests/combined_results.csv") %>%
+  select(-1, -2) %>%
+  mutate(unk=unk == "True") %>%
+  mutate(region=if_else(region=="prefix" | region=="obj wh" | region=="goal wh" | region=="that", "prefix", region)) %>%
+  mutate(region=if_else(region=="short modifier" | region=="medium modifier" | region=="long modifier", "modifier", region)) %>%
+  separate(condition, sep="_", into=c("wh", "gap", "gap_position", "modifier"))
+
+d_agg = d %>%
+  group_by(model, region, sent_index, wh, gap, gap_position, modifier) %>%
+    summarise(surprisal=sum(surprisal), unk=any(unk), distance=n()) %>%
+    ungroup() %>% 
+  filter(!unk) %>%
+  mutate(wh_numeric=if_else(wh == "wh", 1, -1),
+         wh=factor(wh, levels=c("wh", "that")),
+         gap=factor(gap, levels=c("gap", "no-gap")),
+         gap_position=factor(gap_position, levels=c("obj", "goal")),
+         modifier=factor(modifier, levels=c("no-mod", "short-mod", "med-mod", "long-mod")))
+```
+
+### Object position, post-gap material
+
+```{r}
+d_len = d_agg %>%
+  mutate(region2 = region) %>% #So when we spread region we still have the region information
+  mutate(modifier2 = modifier) %>% #Because modifier is both a name of our condition and a region!
+  spread(region, distance) %>%
+  
+  group_by(sent_index, wh, gap, gap_position, wh_numeric, modifier2) %>%
+    fill(c("End", "goal", "modifier", "object", "prefix", "subj", "temporal_modifier", "to", "verb"), .direction = c("down"))%>%
+    fill(c("End", "goal", "modifier", "object", "prefix", "subj", "temporal_modifier", "to", "verb"), .direction = c("up"))%>%
+    ungroup()%>%
+    mutate_if(is.numeric , replace_na, replace = 0) %>%
+  
+  select(-object, -End, -goal, -prefix, -subj, -temporal_modifier, -to, -verb) %>%
+  filter(region2 == "to") %>%
+  filter(gap_position == "obj")
+  
+d_dist = d_len %>%
+  group_by(model, sent_index, wh, gap, gap_position, modifier2, modifier) %>%
+    summarise(total_surprisal = sum(surprisal)) %>%
+    ungroup() %>%
+  
+  filter(gap_position=="obj") %>%
+  spread(gap, total_surprisal) %>%
+  mutate(gap_effect=`no-gap`-gap) %>%
+  select(-gap, -`no-gap`) %>%
+  spread(wh, gap_effect) %>%
+  mutate(wh_interaction=wh-`that`) 
+
+d_dist %>%
+  filter(model == "google" | model == "gulordava") %>%
+  ggplot(aes(x=modifier, y=wh_interaction)) +
+    geom_point() +
+    stat_smooth(method='lm') +
+    facet_wrap(~model) +
+    ylab("Licensing Interaction") +
+    xlab("Length of Modifier in Words") +
+    ggtitle("Obj Position, Post-Gap Material") +
+    facet_wrap(~model) +
+    geom_hline(yintercept=0, color="red", alpha=0.5)
+
+ggsave("~/Desktop/island-graphs/length-postgap-obj.pdf",height=2.5,width=3.5)
+
+```
+
+```{r}
+sum(d_dist["wh_interaction"] > 0)
+nrow(d_dist)
+```
+
+
+```{r}
+d_len = d_len %>%
+  mutate(wh=if_else(wh == "wh", 1, -1)) %>%
+  mutate(gap=if_else(gap == "gap", 1, -1))
+
+goog_freq = d_len %>%
+  filter(model == "google") %>%
+  lmer(surprisal ~ wh * gap * modifier + (wh + gap + modifier  |sent_index), data=.)
+summary(goog_freq)
+
+gul_freq = d_len %>%
+  filter(model == "gulordava") %>%
+  lmer(surprisal ~ wh * gap * modifier + (wh + gap + modifier |sent_index), data=.)
+summary(gul_freq)
+
+```
+
+Okay, so it looks like theres a significant but very minimal correlation between length of intervening phrase and efficacy of wh-licensing when we look at immediate post-gap material in the object position. Now let's look at the pp / indirect object position.
+
+### Goal/PP-obj post-gap material
+
+```{r}
+d_len = d_agg %>%
+  mutate(region2 = region) %>% #So when we spread region we still have the region information
+  mutate(modifier2 = modifier) %>% #Because modifier is both a name of our condition and a region!
+  spread(region, distance) %>%
+  
+  group_by(sent_index, wh, gap, gap_position, wh_numeric, modifier2) %>%
+    fill(c("End", "goal", "modifier", "object", "prefix", "subj", "temporal_modifier", "to", "verb"), .direction = c("down"))%>%
+    fill(c("End", "goal", "modifier", "object", "prefix", "subj", "temporal_modifier", "to", "verb"), .direction = c("up"))%>%
+    ungroup()%>%
+    mutate_if(is.numeric , replace_na, replace = 0) %>%
+  
+  select(-object, -End, -goal, -prefix, -subj, -temporal_modifier, -to, -verb) %>%
+  filter(region2 == "End") %>%
+  filter(gap_position == "goal")
+
+d_dist = d_len %>%
+  select(-wh_numeric) %>%
+  filter(gap_position=="goal") %>%
+  spread(gap, surprisal) %>%
+  mutate(gap_effect=`no-gap`-gap) %>%
+  select(-gap, -`no-gap`) %>%
+  spread(wh, gap_effect) %>%
+  mutate(wh_interaction=wh-`that`) 
+
+d_dist %>%
+  filter(model == "google" | model == "gulordava") %>%
+  ggplot(aes(x=modifier, y=wh_interaction)) +
+    geom_point() +
+    stat_smooth(method='lm') +
+    facet_wrap(~model) +
+    ylab("Licensing Interaction") +
+    xlab("Length of Modifier in Words") +
+    ggtitle("Goal Position, Post-Gap Material") +
+    facet_wrap(~model) +
+    geom_hline(yintercept=0, color="red", alpha=0.5)
+ggsave("~/Desktop/island-graphs/length-postgap-goal.pdf",height=2.5,width=3.5)
+
+```
+
+
+```{r}
+sum(d_dist["wh_interaction"] > 0)
+nrow(d_dist)
+```
+
+
+
+
+```{r}
+d_len = d_len %>%
+  mutate(wh=if_else(wh == "wh", 1, -1)) %>%
+  mutate(gap=if_else(gap == "gap", 1, -1))
+
+goog_freq = d_len %>%
+  filter(model == "google") %>%
+  lmer(surprisal ~ wh * gap * modifier + (wh + gap + modifier |sent_index), data=.)
+summary(goog_freq)
+
+gul_freq = d_len %>%
+  filter(model == "gulordava") %>%
+  lmer(surprisal ~ wh * gap * modifier + (wh + gap + modifier |sent_index), data=.)
+summary(gul_freq)
+```
+
+Okay, in this case there's no significant correlation in the google model and a negative, but very very small and berely significant correlation in the gulordava model.
+
+## Continuous variable entire embedded region
+
+### Object gap, embedded clause
+
+For the object gap
+
+```{r}
+d_len = d_agg %>%
+  mutate(region2 = region) %>% #So when we spread region we still have the region information
+  mutate(modifier2 = modifier) %>% #Because modifier is both a name of our condition and a region!
+  spread(region, distance) %>%
+  
+  group_by(sent_index, wh, gap, gap_position, wh_numeric, modifier2) %>%
+    fill(c("End", "goal", "modifier", "object", "prefix", "subj", "temporal_modifier", "to", "verb"), .direction = c("down"))%>%
+    fill(c("End", "goal", "modifier", "object", "prefix", "subj", "temporal_modifier", "to", "verb"), .direction = c("up"))%>%
+    ungroup()%>%
+    mutate_if(is.numeric , replace_na, replace = 0) %>%
+  
+  select( -object, -End, -goal, -prefix, -subj, -temporal_modifier, -to, -verb) %>%
+  filter(region2 == "subj" | region2 == "verb" | region2 == "to" | region2 == "goal" | region2 == "modifier" | region2 == "object") %>%
+  
+  group_by(model, sent_index, wh, gap, gap_position, modifier2, modifier) %>%
+    summarise(total_surprisal = sum(surprisal)) %>%
+    ungroup() %>%
+  filter(gap_position=="obj")
+
+  
+d_dist = d_len %>%
+  spread(gap, total_surprisal) %>%
+  mutate(gap_effect=`no-gap`-gap) %>%
+  select(-gap, -`no-gap`) %>%
+  spread(wh, gap_effect) %>%
+  mutate(wh_interaction=wh-`that`) 
+
+d_dist %>%
+  filter(model == "google" | model == "gulordava") %>%
+  ggplot(aes(x=modifier, y=wh_interaction)) +
+    geom_point() +
+    stat_smooth(method='lm') +
+    facet_wrap(~model) +
+    ylab("Licensing Interaction") +
+    xlab("Length of Modifier in Words") +
+    ggtitle("Obj Position, Whole Clause") +
+    facet_wrap(~model)+
+    geom_hline(yintercept=0, color="red", alpha=0.5)
+ggsave("~/Desktop/island-graphs/length-wholeclause-obj.pdf",height=2.5,width=3.5)
+
+```
+
+```{r}
+sum(d_dist["wh_interaction"] > 0)
+nrow(d_dist)
+```
+
+
+```{r}
+d_len = d_len %>%
+  mutate(wh=if_else(wh == "wh", 1, -1)) %>%
+  mutate(gap=if_else(gap == "gap", 1, -1))
+
+goog_freq = d_len %>%
+  filter(model == "google") %>%
+  lmer(total_surprisal ~ wh * gap * modifier + (wh + gap + modifier |sent_index), data=.)
+summary(goog_freq)
+
+gul_freq = d_len %>%
+  filter(model == "gulordava") %>%
+  lmer(total_surprisal ~ wh * gap * modifier + (1|sent_index), data=.)
+summary(gul_freq)
+```
+
+Okay, we see nothing in the case of google and a highly significant but tiny correlation in the case of hte gulordava model. 
+
+### Goal position -- entire clause
+
+```{r}
+d_len = d_agg %>%
+  mutate(region2 = region) %>% #So when we spread region we still have the region information
+  mutate(modifier2 = modifier) %>% #Because modifier is both a name of our condition and a region!
+  spread(region, distance) %>%
+  
+  group_by(sent_index, wh, gap, gap_position, wh_numeric, modifier2) %>%
+    fill(c("End", "goal", "modifier", "object", "prefix", "subj", "temporal_modifier", "to", "verb"), .direction = c("down"))%>%
+    fill(c("End", "goal", "modifier", "object", "prefix", "subj", "temporal_modifier", "to", "verb"), .direction = c("up"))%>%
+    ungroup()%>%
+    mutate_if(is.numeric , replace_na, replace = 0) %>%
+
+  select(-wh_numeric, -object, -End, -goal, -prefix, -subj, -temporal_modifier, -to, -verb) %>%
+  filter(region2 == "subj" | region2 == "verb" | region2 == "to" | region2 == "goal" | region2 == "modifier" | region2 == "object") %>%
+  
+  group_by(model, sent_index, wh, gap, gap_position, modifier2, modifier) %>%
+    summarise(total_surprisal = sum(surprisal)) %>%
+    ungroup() %>%
+  filter(gap_position=="goal")
+
+d_dist = d_len %>%
+  spread(gap, total_surprisal) %>%
+  mutate(gap_effect=`no-gap`-gap) %>%
+  select(-gap, -`no-gap`) %>%
+  spread(wh, gap_effect) %>%
+  mutate(wh_interaction=wh-`that`) 
+
+d_dist %>%
+  filter(model == "google" | model == "gulordava") %>%
+  ggplot(aes(x=modifier, y=wh_interaction)) +
+    geom_point() +
+    stat_smooth(method='lm') +
+    facet_wrap(~model) +
+    ylab("Licensing Interaction") +
+    xlab("Length of Modifier in Words") +
+    ggtitle("Goal Position, Whole Clause") +
+    facet_wrap(~model) +
+    geom_hline(yintercept=0, color="red", alpha=0.5)
+ggsave("~/Desktop/island-graphs/length-wholeclause-goal.pdf",height=2.5,width=3.5)
+
+```
+
+```{r}
+sum(d_dist["wh_interaction"] > 0)
+nrow(d_dist)
+```
+
+
+```{r}
+d_len = d_len %>%
+  mutate(wh=if_else(wh == "wh", 1, -1)) %>%
+  mutate(gap=if_else(gap == "gap", 1, -1))
+
+goog_freq = d_len %>%
+  filter(model == "google") %>%
+  lmer(total_surprisal ~ wh * gap * modifier + (wh + gap + modifier |sent_index), data=.)
+summary(goog_freq)
+
+gul_freq = d_len %>%
+  filter(model == "gulordava") %>%
+  lmer(total_surprisal ~ wh * gap * modifier + (1|sent_index), data=.)
+summary(gul_freq)
+
+
+```

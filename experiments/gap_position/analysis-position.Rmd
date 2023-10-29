@@ -1,0 +1,438 @@
+---
+title: "Analysis for Wh-Licensing by Position"
+output:
+  pdf_document:
+    latex_engine: xelatex
+---
+```{r}
+rm(list = ls())
+library(tidyverse)
+library(brms)
+library(lme4)
+library(lmerTest)
+library(plotrix)
+library(stringr)
+library(readxl)
+
+remove_na = function(x) {
+  x[!is.na(x)]
+}
+
+
+REGION_ORDER = c("prefix", "apositive", "NP1", "Verb", "NP2", "Prep", "NP3", "End", "EOS")
+REGION_EXEMPLARS = c("I know that/wh", "despite protocol", "the CEO", "showed", "the presentation", "to", "the guests", "after lunch", ". <eos>")
+NUM_REGIONS = length(REGION_ORDER)
+
+d = read_csv("tests/combined_results.csv") %>%
+  select(-1, -2) %>%
+  mutate(unk=unk == "True") %>%
+  mutate(region = if_else(word == "." | word == "<eos>", "EOS", region)) %>%
+  mutate(region=if_else(region == "Prefix" | region == "wh-subj" | region == "wh-obj" | region == "wh-prep" | region == "that", "prefix", region),
+         region=factor(region, levels=REGION_ORDER)) %>%
+  separate(condition, sep="_", into=c("wh", "gap", "gap_position"))
+
+d_agg = d %>% 
+  group_by(model, region, sent_index, wh, gap, gap_position) %>% 
+    summarise(surprisal=sum(surprisal),
+              unk=any(unk)) %>%
+    ungroup() %>% 
+  filter(!unk) %>%
+  mutate(wh_numeric=if_else(wh == "who", 1, -1),
+         wh=factor(wh, levels=c("what", "that")),
+         gap=factor(gap, levels=c("no-gap", "gap")),
+         gap_position=factor(gap_position, levels=c("subj", "obj", "pp")))
+
+```
+
+### Visualization of wh-effect for all three models
+
+```{r}
+d_agg %>%
+  select(-wh_numeric) %>%
+  spread(wh, surprisal) %>%
+  mutate(wh_effect=what-`that`) %>%
+  
+  group_by(region, gap, gap_position, model) %>%
+    summarise(m=mean(wh_effect),
+              s=std.error(wh_effect),
+              upper=m + 1.96*s,
+              lower=m - 1.96*s) %>%
+    ungroup() %>%
+  mutate(region=as.numeric(region)) %>% 
+  ggplot(aes(x=region, y=m, ymax=upper, ymin=lower,linetype=gap, color=gap_position)) +
+    geom_line() +
+    geom_errorbar(linetype="solid", width=.1) +
+    scale_x_continuous(breaks=seq(1, NUM_REGIONS), labels=REGION_EXEMPLARS) +
+    theme(axis.text.x = element_text(angle=45, hjust=1)) +
+    geom_hline(yintercept=0, color="blue", alpha=0.5) +
+  facet_wrap(~model, ncol = 3) +
+  ylab("Mean Wh-Effect in Region") +
+  xlab("Region") +
+  theme(legend.position="top", legend.margin=margin(c(0,0,0,0)))
+
+
+ggsave("~/Desktop/island-graphs/position-wordbyword.pdf",height=3,width=7)
+
+
+```
+
+These are positive visualizations. The drops of the dotted lines (gapped conditions) in the immediate post gap material in each variant indicates that the models are representing the filler-gap dependency. 
+
+
+### Visualization of region-by-region wh-licensing interaction
+
+```{r}
+d_agg %>%
+  filter(model == "gulordava" | model == "google") %>%
+  select(-wh_numeric) %>%
+  spread(gap, surprisal) %>%
+  mutate(gap_effect=`no-gap`-gap) %>%
+  select(-unk, -gap, -`no-gap`) %>%
+  spread(wh, gap_effect) %>%
+  mutate(wh_interaction=what-`that`) %>%
+  
+  group_by(region, gap_position, model) %>%
+    summarise(m=mean(wh_interaction),
+              s=std.error(wh_interaction),
+              upper=m + 1.96*s,
+              lower=m - 1.96*s) %>%
+    ungroup() %>%
+  na.exclude() %>%
+  mutate(region=as.numeric(region)) %>% 
+  ggplot(aes(x=region, y=m, ymax=upper, ymin=lower, color=gap_position)) +
+    geom_line(alpha=0.3) +
+    geom_point(size = 2) +
+    geom_errorbar(linetype="solid", width=.1) +
+    scale_x_continuous(breaks=seq(1, NUM_REGIONS), labels=REGION_EXEMPLARS) +
+    theme(axis.text.x = element_text(angle=45, hjust=1, size = 6)) +
+    theme(axis.title.x=element_blank()) +
+  facet_wrap(~model, ncol = 2) +
+  ylab("Wh-Licensing Interaction") +
+  #xlab("Region") +
+  theme(legend.position="right", legend.margin=margin(c(0,0,0,0)))
+
+ggsave("~/Desktop/island-graphs/position-wordbyword-whinteraction.pdf",height=2,width=7)
+
+
+
+
+```
+
+## Wh-Licensing Interaction, Post-gap Material
+
+Let's start off with the wh-effect
+
+```{r}
+d_whe_1 = d_agg %>%
+  filter(region == "Verb", gap_position == "subj") %>%
+  filter(model == "google" | model == "gulordava") %>%
+  select(-wh_numeric) %>%
+  spread(wh, surprisal) %>%
+  mutate(wh_effect=what-`that`) 
+
+d_whe_2 = d_agg %>%
+  filter(region == "Prep", gap_position == "obj") %>%
+  filter(model == "google" | model == "gulordava") %>%
+  select(-wh_numeric) %>%
+  spread(wh, surprisal) %>%
+  mutate(wh_effect=what-`that`) 
+
+d_whe_3 = d_agg %>%
+  filter(region == "End", gap_position == "pp") %>%
+  filter(model == "google" | model == "gulordava") %>%
+  select(-wh_numeric) %>%
+  spread(wh, surprisal) %>%
+  mutate(wh_effect=what-`that`) 
+
+d_wh_effect = Reduce(function(x, y) merge(x, y, all=TRUE), list(d_whe_1, d_whe_2, d_whe_3))
+
+d_wh_effect = d_wh_effect %>%
+  select(-region) %>%
+  #Error Calculation
+  #Across condition mean response
+  group_by(model, sent_index) %>%
+    mutate(across_condition_mean = mean(wh_effect)) %>%
+  ungroup() %>%
+  #Item mean-extracted-response measure
+  mutate(item_mean = wh_effect - across_condition_mean) %>%
+  #Across item item-mean error
+  group_by(model, gap_position, gap) %>%
+    mutate(err = std.error(item_mean, na.rm=T)) %>%
+  ungroup() %>%
+  select(-item_mean, -across_condition_mean)
+
+d_wh_effect %>% 
+  group_by(model, gap, gap_position) %>%
+    summarise(m=mean(wh_effect),
+              s=mean(err),
+              upper=m+1.96*s,
+              lower=m-1.96*s) %>%
+      ungroup() %>%
+  ggplot(aes(x=gap_position, y=m, ymin=lower, ymax=upper, fill=gap)) +
+    geom_bar(stat="identity", position="dodge") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~model) +
+  ylab("Surprisal with wh-complimentizer vs. Surprisal with that-complimentizer") +
+  xlab("Gap Location") +
+  theme(legend.position = c(0.8, 0.2)) +
+  ggtitle("Wh-Main Effect, Post Gap Material")
+ggsave("~/Desktop/island-graphs/position-wheffect-postgap.pdf",height=5,width=3.5)
+```
+
+Now let's look at the full 2x2 interaction of wh-phrase presence and gap presence, for each of the gap positions. This is the strength of evidence for the filler-gap dependency.
+
+```{r}
+
+d_full_interaction_1 = d_agg %>%
+  filter(region == "Verb", gap_position == "subj") %>%
+  select(-wh_numeric) %>%
+  spread(gap, surprisal) %>%
+  mutate(gap_effect=`no-gap`-gap) %>%
+  select(-unk, -gap, -`no-gap`) %>%
+  spread(wh, gap_effect) %>%
+  mutate(wh_interaction=what-`that`) 
+
+d_full_interaction_2 = d_agg %>%
+  filter(region == "Prep", gap_position == "obj") %>%
+  select(-wh_numeric) %>%
+  spread(gap, surprisal) %>%
+  mutate(gap_effect=`no-gap`-gap) %>%
+  select(-unk, -gap, -`no-gap`) %>%
+  spread(wh, gap_effect) %>%
+  mutate(wh_interaction=what-`that`)
+
+d_full_interaction_3 = d_agg %>%
+  filter(region == "End", gap_position == "pp") %>%
+  select(-wh_numeric) %>%
+  spread(gap, surprisal) %>%
+  mutate(gap_effect=`no-gap`-gap) %>%
+  select(-unk, -gap, -`no-gap`) %>%
+  spread(wh, gap_effect) %>%
+  mutate(wh_interaction=what-`that`)
+
+d_full_interaction = Reduce(function(x, y) merge(x, y, all=TRUE), list(d_full_interaction_1, d_full_interaction_2, d_full_interaction_3))
+
+d_full_interaction = d_full_interaction %>%
+  select(-region) %>%
+  #Error Calculation
+  #Across condition mean response
+  group_by(model, sent_index) %>%
+    mutate(across_condition_mean = mean(wh_interaction)) %>%
+  ungroup() %>%
+  #Item mean-extracted-response measure
+  mutate(item_mean = wh_interaction - across_condition_mean) %>%
+  #Across item item-mean error
+  group_by(model, gap_position) %>%
+    mutate(err = std.error(item_mean, na.rm=T)) %>%
+  ungroup() %>%
+  select(-item_mean, -across_condition_mean)
+
+d_full_interaction %>%
+  filter(model == "google" | model == "gulordava") %>%
+  group_by(model, gap_position) %>%
+    summarise(m=mean(wh_interaction, na.rm=T),
+              s=mean(err),
+              upper=m+1.96*s,
+              lower=m-1.96*s) %>%
+    ungroup() %>%
+  ggplot(aes(x=gap_position, y=m, ymin=lower, ymax=upper, fill=gap_position)) +
+    geom_bar(stat="identity") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~model) +
+  ylab("Wh-Licensing Interaction") +
+  xlab("Gap Location") +
+  theme(legend.position="none") +
+  ggtitle("Post Gap Material")
+
+ggsave("~/Desktop/island-graphs/position-postgap.pdf",height=5,width=3.5)
+```
+
+
+There seems to be evidence for subject, object, and PP gaps in the full interaction. Neither model shows the expected decrease in strength with the object, subject and then PP gap. The Google model seems to have a robustly higher licensing interaction than the gulordava model.
+
+Stats.
+
+
+```{r}
+d_agg = d_agg %>%
+  mutate(gap_numeric=if_else(gap == "gap", 1, -1)) %>%
+  mutate(wh_numeric = if_else(wh == "what", 1, -1))
+
+# For the subject condition
+m_google = d_agg %>%
+  filter(region == "Verb", gap_position == "subj") %>%
+  filter(model == "google") %>%
+  lmer(surprisal ~ wh_numeric * gap_numeric + (wh_numeric+gap_numeric|sent_index), data=.)
+summary(m_google)
+
+m_gul = d_agg %>%
+  filter(region == "Verb", gap_position == "subj") %>%
+  filter(model == "gulordava") %>%
+  lmer(surprisal ~ wh_numeric * gap_numeric + (wh_numeric+gap_numeric|sent_index), data=.)
+summary(m_gul)
+
+# For the object condition
+m_google = d_agg %>%
+  filter(region == "Prep", gap_position == "obj") %>%
+  filter(model == "google") %>%
+  lmer(surprisal ~ wh_numeric * gap_numeric + (wh_numeric+gap_numeric|sent_index), data=.)
+summary(m_google)
+
+m_gul = d_agg %>%
+  filter(region == "Prep", gap_position == "obj") %>%
+  filter(model == "gulordava") %>%
+  lmer(surprisal ~ wh_numeric * gap_numeric + (wh_numeric+gap_numeric|sent_index), data=.)
+summary(m_gul)
+
+# For the PP/Goal condition
+m_google = d_agg %>%
+  filter(region == "End", gap_position == "pp") %>%
+  filter(model == "google") %>%
+  lmer(surprisal ~ wh_numeric * gap_numeric + (wh_numeric+gap_numeric|sent_index), data=.)
+summary(m_google)
+
+m_gul = d_agg %>%
+  filter(region == "End", gap_position == "pp") %>%
+  filter(model == "gulordava") %>%
+  lmer(surprisal ~ wh_numeric * gap_numeric + (wh_numeric+gap_numeric|sent_index), data=.)
+summary(m_gul)
+
+```
+
+This says: when there is a gap, it makes things easier (because there's no filler to contribute to surprisal). And when there is a wh-word, the gaps get even easier, significantly so for all gap positions. This is the expected result, with the exception that the order of effect sizes is not as expected under the Google model (obj dependency weaker than PP dependency).
+
+### Now let's take a look at the whole-clause condition
+
+```{r}
+d = read_csv("tests/combined_results.csv") %>%
+  select(-1, -2) %>%
+  mutate(unk=unk == "True") %>%
+  mutate(region=if_else(region == "Prefix" | region == "wh-subj" | region == "wh-obj" | region == "wh-prep" | region == "that", "prefix", region)) %>%
+  mutate(region = if_else(region == "apositive" | region == "NP1" | region == "Verb" | region == "NP2" | region == "Prep" | region == "NP3" | region == "End" | region == "EOS", "embed", region)) %>%
+  separate(condition, sep="_", into=c("wh", "gap", "gap_position"))
+
+d_agg = d %>% 
+  group_by(model, region, sent_index, wh, gap, gap_position) %>% 
+    summarise(surprisal=sum(surprisal),
+              unk=any(unk)) %>%
+    ungroup() %>% 
+  filter(!unk) %>%
+  mutate(wh_numeric=if_else(wh == "what", 1, -1),
+         wh=factor(wh, levels=c("what", "that")),
+         gap=factor(gap, levels=c("no-gap", "gap")),
+         gap_position=factor(gap_position, levels=c("subj", "obj", "pp")))
+```
+
+```{r}
+d_whe_3 = d_agg %>%
+  filter(region == "embed") %>%
+  filter(model == "google" | model == "gulordava") %>%
+  select(-wh_numeric) %>%
+  spread(wh, surprisal) %>%
+  mutate(wh_effect=what-`that`) 
+
+d_wh_effect = Reduce(function(x, y) merge(x, y, all=TRUE), list(d_whe_1, d_whe_2, d_whe_3))
+
+d_wh_effect = d_wh_effect %>%
+  select(-region) %>%
+  #Error Calculation
+  #Across condition mean response
+  group_by(model, sent_index) %>%
+    mutate(across_condition_mean = mean(wh_effect)) %>%
+  ungroup() %>%
+  #Item mean-extracted-response measure
+  mutate(item_mean = wh_effect - across_condition_mean) %>%
+  #Across item item-mean error
+  group_by(model, gap_position, gap) %>%
+    mutate(err = std.error(item_mean, na.rm=T)) %>%
+  ungroup() %>%
+  select(-item_mean, -across_condition_mean)
+
+d_wh_effect %>% 
+  group_by(model, gap, gap_position) %>%
+    summarise(m=mean(wh_effect),
+              s=mean(err),
+              upper=m+1.96*s,
+              lower=m-1.96*s) %>%
+      ungroup() %>%
+  ggplot(aes(x=gap_position, y=m, ymin=lower, ymax=upper, fill=gap)) +
+    geom_bar(stat="identity", position="dodge") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~model) +
+  ylab("Surprisal with wh-complimentizer vs. Surprisal with that-complimentizer") +
+  xlab("Gap Location") +
+  theme(legend.position = c(0.8, 0.8)) +
+  ggtitle("Wh-Main Effect, Whole Clause")
+
+ggsave("~/Desktop/island-graphs/position-wheffect-wholeclause.pdf",height=5,width=3.5)
+```
+
+This shows the wh-licensing effect (not interaciton) for each of the syntactic positions. For a better picture of what's going on, let's take a look at the whole licensing interaction below:
+
+
+```{r}
+d_full_interaction = d_agg %>%
+  filter(region == "embed") %>%
+  select(-wh_numeric) %>%
+  spread(gap, surprisal) %>%
+  mutate(gap_effect=`no-gap`-gap) %>%
+  select(-unk, -gap, -`no-gap`) %>%
+  spread(wh, gap_effect) %>%
+  mutate(wh_interaction=what-`that`)
+
+d_full_interaction = d_full_interaction %>%
+  select(-region) %>%
+  #Error Calculation
+  #Across condition mean response
+  group_by(model, sent_index) %>%
+    mutate(across_condition_mean = mean(wh_interaction)) %>%
+  ungroup() %>%
+  #Item mean-extracted-response measure
+  mutate(item_mean = wh_interaction - across_condition_mean) %>%
+  #Across item item-mean error
+  group_by(model, gap_position) %>%
+    mutate(err = std.error(item_mean, na.rm=T)) %>%
+  ungroup() %>%
+  select(-item_mean, -across_condition_mean)
+
+d_full_interaction %>%
+  filter(model == "google" | model == "gulordava") %>%
+  group_by(model, gap_position) %>%
+    summarise(m=mean(wh_interaction, na.rm=T),
+              s=mean(err),
+              upper=m+1.96*s,
+              lower=m-1.96*s) %>%
+    ungroup() %>%
+  ggplot(aes(x=gap_position, y=m, ymin=lower, ymax=upper, fill=gap_position)) +
+    geom_bar(stat="identity") +
+    geom_errorbar(color="black", width=.5, position=position_dodge(width=.9)) +
+    facet_wrap(~model) +
+    ylab("Wh-Licensing Interaction") +
+    xlab("Gap Location") +
+    theme(legend.position="none") +
+    ggtitle("Whole Clause")
+
+ggsave("~/Desktop/island-graphs/position-wholeclause.pdf",height=5,width=3.5)
+```
+         
+This shows that there is a licensing interaction going on for all of our syntactic positions. However, it looks like for the google model there is a significantly larger licensing interaction that's going on in object position over and above the other two positions. Looking back at the region-by-region plots this seems to be due to the spillover effect, where there's a strong licensing interaction in both the embedded clause verb and also the direct obejct. BUT the size of these interactions isn't significantly taller than the size of the object or PP licensing interactions. Does this mean that the model "Expects" a subject gap more than the others? It's hard to tell, and an interprative question that we should discuss together.
+         
+```{r}
+d_agg = d_agg %>%
+  mutate(gap_numeric=if_else(gap == "gap", 1, -1)) %>%
+  mutate(wh_numeric = if_else(wh == "what", 1, -1))
+
+m_google = d_agg %>%
+  filter(model == "google", region == "embed") %>%
+  lmer(surprisal ~ gap * wh_numeric * gap_position + (gap+wh_numeric+gap_position|sent_index), data=.)
+summary(m_google)
+
+m_gul = d_agg %>%
+  filter(model == "gulordava", region == "embed") %>%
+  lmer(surprisal ~ gap * wh_numeric * gap_position + (gap+wh_numeric+gap_position|sent_index), data=.)
+summary(m_gul)
+
+```       
+
+What this says is that the licensing interaction is significant in both models, but in the google model there is a reduction in licensing interaction in the goal and pp positions, as it looked like from the bar chart.
+

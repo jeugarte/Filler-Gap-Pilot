@@ -1,0 +1,288 @@
+I know that my brother said our aunt devoured the cake in front of the guests at the holiday party . <eos>
+My neighbor told me that the fireman believes the dog caught the cat in full view of the neighbors yesterday . <eos>
+I know that despite setbacks the committee delivered the report to the president by the deadline . <eos>
+You remember that despite protocol the businessman showed the presentation to the visitors after lunch . <eos>
+She told me that the teacher suspects the star student stole answers to the test from the history teacher last semester . <eos>
+She knows that the expert can tell the collector forged the painting with the help of a new technology a short while ago . <eos>
+We all remember that the politician said the convict smuggled a gun into the prison two weeks ago . <eos>
+My friend reported that despite the strong economy the company will sell multiple assets to benefit stock holders over the subsequent quarter . <eos>
+I do not know that the actor suspects her rival sabotaged the audition with a cruel plan last week . <eos>
+She can guess that our friend predicts the movie star will be awarded an oscar for her hard work during the award ceremony . <eos>
+The newspaper reported that despite the lack of evidence the suspect killed the witness with a knife in the middle of the night . <eos>
+We recall that despite best practice the chef placed a wooden spoon next to the oven over an hour ago . <eos>
+I remember that the doctor decided the nurse should administer the new medicine to the sick patient without any delay . <eos>
+Our friend guessed that despite public outcry the gossip column revealed family secrets to the whole town yesterday . <eos>
+The mayor told me that the town clerk heard the town repaired the parking lot with the help of an anonymous doner over the summer . <eos>
+My friend remembers that the senator testified about the government collected sensitive data about foreign threats using illegal methods . <eos>
+The newspaper said that despite the hot weather the neighbors sold a convertible to the new couple last month . <eos>
+Our neighbor said that despite her busy schedule the student sent a package to her mother over a week ago . <eos>
+My friend told me that the consultant assumes the university hired a new administrator to help with increased enrollment for the following year . <eos>
+She can not believe that despite his strong morals my good friend stole a candy bar from the pharmacy when he was young . <eos>
+Our neighbor reminded us that despite the flood the tow truck hauled the wagon out of the ditch last spring . <eos>
+The shop owner told me that the baker forgot the restaurant prepared a new recipe for their favorite guests yesterday evening . <eos>
+My sister told me that despite protest the newspaper published a scandalous story about the mayor last month . <eos>
+We remember that despite habit our new friend brought a large present to the birthday party last weekend . <eos>
+I know that my brother said devoured the cake in front of the guests at the holiday party . <eos>
+My neighbor told me that the fireman believes caught the cat in full view of the neighbors yesterday . <eos>
+I know that despite setbacks delivered the report to the president by the deadline . <eos>
+You remember that despite protocol showed the presentation to the visitors after lunch . <eos>
+She told me that the teacher suspects stole answers to the test from the history teacher last semester . <eos>
+She knows that the expert can tell forged the painting with the help of a new technology a short while ago . <eos>
+We all remember that the politician said smuggled a gun into the prison two weeks ago . <eos>
+My friend reported that despite the strong economy will sell multiple assets to benefit stock holders over the subsequent quarter . <eos>
+I do not know that the actor suspects sabotaged the audition with a cruel plan last week . <eos>
+She can guess that our friend predicts will be awarded an oscar for her hard work during the award ceremony . <eos>
+The newspaper reported that despite the lack of evidence killed the witness with a knife in the middle of the night . <eos>
+We recall that despite best practice placed a wooden spoon next to the oven over an hour ago . <eos>
+I remember that the doctor decided should administer the new medicine to the sick patient without any delay . <eos>
+Our friend guessed that despite public outcry revealed family secrets to the whole town yesterday . <eos>
+The mayor told me that the town clerk heard repaired the parking lot with the help of an anonymous doner over the summer . <eos>
+My friend remembers that the senator testified about collected sensitive data about foreign threats using illegal methods . <eos>
+The newspaper said that despite the hot weather sold a convertible to the new couple last month . <eos>
+Our neighbor said that despite her busy schedule sent a package to her mother over a week ago . <eos>
+My friend told me that the consultant assumes hired a new administrator to help with increased enrollment for the following year . <eos>
+She can not believe that despite his strong morals stole a candy bar from the pharmacy when he was young . <eos>
+Our neighbor reminded us that despite the flood hauled the wagon out of the ditch last spring . <eos>
+The shop owner told me that the baker forgot prepared a new recipe for their favorite guests yesterday evening . <eos>
+My sister told me that despite protest published a scandalous story about the mayor last month . <eos>
+We remember that despite habit brought a large present to the birthday party last weekend . <eos>
+I know who my brother said our aunt devoured the cake in front of the guests at the holiday party . <eos>
+My neighbor told me what the fireman believes the dog caught the cat in full view of the neighbors yesterday . <eos>
+I know who despite setbacks the committee delivered the report to the president by the deadline . <eos>
+You remember who despite protocol the businessman showed the presentation to the visitors after lunch . <eos>
+She told me who the teacher suspects the star student stole answers to the test from the history teacher last semester . <eos>
+She knows who the expert can tell the collector forged the painting with the help of a new technology a short while ago . <eos>
+We all remember who the politician said the convict smuggled a gun into the prison two weeks ago . <eos>
+My friend reported what despite the strong economy the company will sell multiple assets to benefit stock holders over the subsequent quarter . <eos>
+I do not know who the actor suspects her rival sabotaged the audition with a cruel plan last week . <eos>
+She can guess who our friend predicts the movie star will be awarded an oscar for her hard work during the award ceremony . <eos>
+The newspaper reported who despite the lack of evidence the suspect killed the witness with a knife in the middle of the night . <eos>
+We recall what despite best practice the chef placed a wooden spoon next to the oven over an hour ago . <eos>
+I remember who the doctor decided the nurse should administer the new medicine to the sick patient without any delay . <eos>
+Our friend guessed who despite public outcry the gossip column revealed family secrets to the whole town yesterday . <eos>
+The mayor told me what the town clerk heard the town repaired the parking lot with the help of an anonymous doner over the summer . <eos>
+My friend remembers what the senator testified about the government collected sensitive data about foreign threats using illegal methods . <eos>
+The newspaper said who despite the hot weather the neighbors sold a convertible to the new couple last month . <eos>
+Our neighbor said who despite her busy schedule the student sent a package to her mother over a week ago . <eos>
+My friend told me what the consultant assumes the university hired a new administrator to help with increased enrollment for the following year . <eos>
+She can not believe who despite his strong morals my good friend stole a candy bar from the pharmacy when he was young . <eos>
+Our neighbor reminded us what despite the flood the tow truck hauled the wagon out of the ditch last spring . <eos>
+The shop owner told me what the baker forgot the restaurant prepared a new recipe for their favorite guests yesterday evening . <eos>
+My sister told me what despite protest the newspaper published a scandalous story about the mayor last month . <eos>
+We remember who despite habit our new friend brought a large present to the birthday party last weekend . <eos>
+I know who my brother said devoured the cake in front of the guests at the holiday party . <eos>
+My neighbor told me what the fireman believes caught the cat in full view of the neighbors yesterday . <eos>
+I know who despite setbacks delivered the report to the president by the deadline . <eos>
+You remember who despite protocol showed the presentation to the visitors after lunch . <eos>
+She told me who the teacher suspects stole answers to the test from the history teacher last semester . <eos>
+She knows who the expert can tell forged the painting with the help of a new technology a short while ago . <eos>
+We all remember who the politician said smuggled a gun into the prison two weeks ago . <eos>
+My friend reported what despite the strong economy will sell multiple assets to benefit stock holders over the subsequent quarter . <eos>
+I do not know who the actor suspects sabotaged the audition with a cruel plan last week . <eos>
+She can guess who our friend predicts will be awarded an oscar for her hard work during the award ceremony . <eos>
+The newspaper reported who despite the lack of evidence killed the witness with a knife in the middle of the night . <eos>
+We recall what despite best practice placed a wooden spoon next to the oven over an hour ago . <eos>
+I remember who the doctor decided should administer the new medicine to the sick patient without any delay . <eos>
+Our friend guessed who despite public outcry revealed family secrets to the whole town yesterday . <eos>
+The mayor told me what the town clerk heard repaired the parking lot with the help of an anonymous doner over the summer . <eos>
+My friend remembers what the senator testified about collected sensitive data about foreign threats using illegal methods . <eos>
+The newspaper said who despite the hot weather sold a convertible to the new couple last month . <eos>
+Our neighbor said who despite her busy schedule sent a package to her mother over a week ago . <eos>
+My friend told me what the consultant assumes hired a new administrator to help with increased enrollment for the following year . <eos>
+She can not believe who despite his strong morals stole a candy bar from the pharmacy when he was young . <eos>
+Our neighbor reminded us what despite the flood hauled the wagon out of the ditch last spring . <eos>
+The shop owner told me what the baker forgot prepared a new recipe for their favorite guests yesterday evening . <eos>
+My sister told me what despite protest published a scandalous story about the mayor last month . <eos>
+We remember who despite habit brought a large present to the birthday party last weekend . <eos>
+I know that my brother said our aunt devoured the cake in front of the guests at the holiday party . <eos>
+My neighbor told me that the fireman believes the dog caught the cat in full view of the neighbors yesterday . <eos>
+I know that despite setbacks the committee delivered the report to the president by the deadline . <eos>
+You remember that despite protocol the businessman showed the presentation to the visitors after lunch . <eos>
+She told me that the teacher suspects the star student stole answers to the test from the history teacher last semester . <eos>
+She knows that the expert can tell the collector forged the painting with the help of a new technology a short while ago . <eos>
+We all remember that the politician said the convict smuggled a gun into the prison two weeks ago . <eos>
+My friend reported that despite the strong economy the company will sell multiple assets to benefit stock holders over the subsequent quarter . <eos>
+I do not know that the actor suspects her rival sabotaged the audition with a cruel plan last week . <eos>
+She can guess that our friend predicts the movie star will be awarded an oscar for her hard work during the award ceremony . <eos>
+The newspaper reported that despite the lack of evidence the suspect killed the witness with a knife in the middle of the night . <eos>
+We recall that despite best practice the chef placed a wooden spoon next to the oven over an hour ago . <eos>
+I remember that the doctor decided the nurse should administer the new medicine to the sick patient without any delay . <eos>
+Our friend guessed that despite public outcry the gossip column revealed family secrets to the whole town yesterday . <eos>
+The mayor told me that the town clerk heard the town repaired the parking lot with the help of an anonymous doner over the summer . <eos>
+My friend remembers that the senator testified about the government collected sensitive data about foreign threats using illegal methods . <eos>
+The newspaper said that despite the hot weather the neighbors sold a convertible to the new couple last month . <eos>
+Our neighbor said that despite her busy schedule the student sent a package to her mother over a week ago . <eos>
+My friend told me that the consultant assumes the university hired a new administrator to help with increased enrollment for the following year . <eos>
+She can not believe that despite his strong morals my good friend stole a candy bar from the pharmacy when he was young . <eos>
+Our neighbor reminded us that despite the flood the tow truck hauled the wagon out of the ditch last spring . <eos>
+The shop owner told me that the baker forgot the restaurant prepared a new recipe for their favorite guests yesterday evening . <eos>
+My sister told me that despite protest the newspaper published a scandalous story about the mayor last month . <eos>
+We remember that despite habit our new friend brought a large present to the birthday party last weekend . <eos>
+I know that my brother said our aunt devoured in front of the guests at the holiday party . <eos>
+My neighbor told me that the fireman believes the dog caught in full view of the neighbors yesterday . <eos>
+I know that despite setbacks the committee delivered to the president by the deadline . <eos>
+You remember that despite protocol the businessman showed to the visitors after lunch . <eos>
+She told me that the teacher suspects the star student stole from the history teacher last semester . <eos>
+She knows that the expert can tell the collector forged with the help of a new technology a short while ago . <eos>
+We all remember that the politician said the convict smuggled into the prison two weeks ago . <eos>
+My friend reported that despite the strong economy the company will sell to benefit stock holders over the subsequent quarter . <eos>
+I do not know that the actor suspects her rival sabotaged with a cruel plan last week . <eos>
+She can guess that our friend predicts the movie star will be awarded for her hard work during the award ceremony . <eos>
+The newspaper reported that despite the lack of evidence the suspect killed with a knife in the middle of the night . <eos>
+We recall that despite best practice the chef placed next to the oven over an hour ago . <eos>
+I remember that the doctor decided the nurse should administer to the sick patient without any delay . <eos>
+Our friend guessed that despite public outcry the gossip column revealed to the whole town yesterday . <eos>
+The mayor told me that the town clerk heard the town repaired with the help of an anonymous doner over the summer . <eos>
+My friend remembers that the senator testified about the government collected about foreign threats using illegal methods . <eos>
+The newspaper said that despite the hot weather the neighbors sold to the new couple last month . <eos>
+Our neighbor said that despite her busy schedule the student sent to her mother over a week ago . <eos>
+My friend told me that the consultant assumes the university hired to help with increased enrollment for the following year . <eos>
+She can not believe that despite his strong morals my good friend stole from the pharmacy when he was young . <eos>
+Our neighbor reminded us that despite the flood the tow truck hauled out of the ditch last spring . <eos>
+The shop owner told me that the baker forgot the restaurant prepared for their favorite guests yesterday evening . <eos>
+My sister told me that despite protest the newspaper published about the mayor last month . <eos>
+We remember that despite habit our new friend brought to the birthday party last weekend . <eos>
+I know what my brother said our aunt devoured the cake in front of the guests at the holiday party . <eos>
+My neighbor told me what the fireman believes the dog caught the cat in full view of the neighbors yesterday . <eos>
+I know what despite setbacks the committee delivered the report to the president by the deadline . <eos>
+You remember what despite protocol the businessman showed the presentation to the visitors after lunch . <eos>
+She told me what the teacher suspects the star student stole answers to the test from the history teacher last semester . <eos>
+She knows what the expert can tell the collector forged the painting with the help of a new technology a short while ago . <eos>
+We all remember what the politician said the convict smuggled a gun into the prison two weeks ago . <eos>
+My friend reported what despite the strong economy the company will sell multiple assets to benefit stock holders over the subsequent quarter . <eos>
+I do not know what the actor suspects her rival sabotaged the audition with a cruel plan last week . <eos>
+She can guess what our friend predicts the movie star will be awarded an oscar for her hard work during the award ceremony . <eos>
+The newspaper reported who despite the lack of evidence the suspect killed the witness with a knife in the middle of the night . <eos>
+We recall who despite best practice the chef placed a wooden spoon next to the oven over an hour ago . <eos>
+I remember what the doctor decided the nurse should administer the new medicine to the sick patient without any delay . <eos>
+Our friend guessed what despite public outcry the gossip column revealed family secrets to the whole town yesterday . <eos>
+The mayor told me what the town clerk heard the town repaired the parking lot with the help of an anonymous doner over the summer . <eos>
+My friend remembers what the senator testified about the government collected sensitive data about foreign threats using illegal methods . <eos>
+The newspaper said what despite the hot weather the neighbors sold a convertible to the new couple last month . <eos>
+Our neighbor said what despite her busy schedule the student sent a package to her mother over a week ago . <eos>
+My friend told me who the consultant assumes the university hired a new administrator to help with increased enrollment for the following year . <eos>
+She can not believe who despite his strong morals my good friend stole a candy bar from the pharmacy when he was young . <eos>
+Our neighbor reminded us what despite the flood the tow truck hauled the wagon out of the ditch last spring . <eos>
+The shop owner told me what the baker forgot the restaurant prepared a new recipe for their favorite guests yesterday evening . <eos>
+My sister told me what despite protest the newspaper published a scandalous story about the mayor last month . <eos>
+We remember what despite habit our new friend brought a large present to the birthday party last weekend . <eos>
+I know what my brother said our aunt devoured in front of the guests at the holiday party . <eos>
+My neighbor told me what the fireman believes the dog caught in full view of the neighbors yesterday . <eos>
+I know what despite setbacks the committee delivered to the president by the deadline . <eos>
+You remember what despite protocol the businessman showed to the visitors after lunch . <eos>
+She told me what the teacher suspects the star student stole from the history teacher last semester . <eos>
+She knows what the expert can tell the collector forged with the help of a new technology a short while ago . <eos>
+We all remember what the politician said the convict smuggled into the prison two weeks ago . <eos>
+My friend reported what despite the strong economy the company will sell to benefit stock holders over the subsequent quarter . <eos>
+I do not know what the actor suspects her rival sabotaged with a cruel plan last week . <eos>
+She can guess what our friend predicts the movie star will be awarded for her hard work during the award ceremony . <eos>
+The newspaper reported who despite the lack of evidence the suspect killed with a knife in the middle of the night . <eos>
+We recall who despite best practice the chef placed next to the oven over an hour ago . <eos>
+I remember what the doctor decided the nurse should administer to the sick patient without any delay . <eos>
+Our friend guessed what despite public outcry the gossip column revealed to the whole town yesterday . <eos>
+The mayor told me what the town clerk heard the town repaired with the help of an anonymous doner over the summer . <eos>
+My friend remembers what the senator testified about the government collected about foreign threats using illegal methods . <eos>
+The newspaper said what despite the hot weather the neighbors sold to the new couple last month . <eos>
+Our neighbor said what despite her busy schedule the student sent to her mother over a week ago . <eos>
+My friend told me who the consultant assumes the university hired to help with increased enrollment for the following year . <eos>
+She can not believe who despite his strong morals my good friend stole from the pharmacy when he was young . <eos>
+Our neighbor reminded us what despite the flood the tow truck hauled out of the ditch last spring . <eos>
+The shop owner told me what the baker forgot the restaurant prepared for their favorite guests yesterday evening . <eos>
+My sister told me what despite protest the newspaper published about the mayor last month . <eos>
+We remember what despite habit our new friend brought to the birthday party last weekend . <eos>
+I know that my brother said our aunt devoured the cake in front of the guests at the holiday party . <eos>
+My neighbor told me that the fireman believes the dog caught the cat in full view of the neighbors yesterday . <eos>
+I know that despite setbacks the committee delivered the report to the president by the deadline . <eos>
+You remember that despite protocol the businessman showed the presentation to the visitors after lunch . <eos>
+She told me that the teacher suspects the star student stole answers to the test from the history teacher last semester . <eos>
+She knows that the expert can tell the collector forged the painting with the help of a new technology a short while ago . <eos>
+We all remember that the politician said the convict smuggled a gun into the prison two weeks ago . <eos>
+My friend reported that despite the strong economy the company will sell multiple assets to benefit stock holders over the subsequent quarter . <eos>
+I do not know that the actor suspects her rival sabotaged the audition with a cruel plan last week . <eos>
+She can guess that our friend predicts the movie star will be awarded an oscar for her hard work during the award ceremony . <eos>
+The newspaper reported that despite the lack of evidence the suspect killed the witness with a knife in the middle of the night . <eos>
+We recall that despite best practice the chef placed a wooden spoon next to the oven over an hour ago . <eos>
+I remember that the doctor decided the nurse should administer the new medicine to the sick patient without any delay . <eos>
+Our friend guessed that despite public outcry the gossip column revealed family secrets to the whole town yesterday . <eos>
+The mayor told me that the town clerk heard the town repaired the parking lot with the help of an anonymous doner over the summer . <eos>
+My friend remembers that the senator testified about the government collected sensitive data about foreign threats using illegal methods . <eos>
+The newspaper said that despite the hot weather the neighbors sold a convertible to the new couple last month . <eos>
+Our neighbor said that despite her busy schedule the student sent a package to her mother over a week ago . <eos>
+My friend told me that the consultant assumes the university hired a new administrator to help with increased enrollment for the following year . <eos>
+She can not believe that despite his strong morals my good friend stole a candy bar from the pharmacy when he was young . <eos>
+Our neighbor reminded us that despite the flood the tow truck hauled the wagon out of the ditch last spring . <eos>
+The shop owner told me that the baker forgot the restaurant prepared a new recipe for their favorite guests yesterday evening . <eos>
+My sister told me that despite protest the newspaper published a scandalous story about the mayor last month . <eos>
+We remember that despite habit our new friend brought a large present to the birthday party last weekend . <eos>
+I know that my brother said our aunt devoured the cake in front of at the holiday party . <eos>
+My neighbor told me that the fireman believes the dog caught the cat in full view of yesterday . <eos>
+I know that despite setbacks the committee delivered the report to by the deadline . <eos>
+You remember that despite protocol the businessman showed the presentation to after lunch . <eos>
+She told me that the teacher suspects the star student stole answers to the test from last semester . <eos>
+She knows that the expert can tell the collector forged the painting with the help of a short while ago . <eos>
+We all remember that the politician said the convict smuggled a gun into two weeks ago . <eos>
+My friend reported that despite the strong economy the company will sell multiple assets to benefit over the subsequent quarter . <eos>
+I do not know that the actor suspects her rival sabotaged the audition with last week . <eos>
+She can guess that our friend predicts the movie star will be awarded an oscar for during the award ceremony . <eos>
+The newspaper reported that despite the lack of evidence the suspect killed the witness with in the middle of the night . <eos>
+We recall that despite best practice the chef placed a wooden spoon next to over an hour ago . <eos>
+I remember that the doctor decided the nurse should administer the new medicine to without any delay . <eos>
+Our friend guessed that despite public outcry the gossip column revealed family secrets to yesterday . <eos>
+The mayor told me that the town clerk heard the town repaired the parking lot with the help of over the summer . <eos>
+My friend remembers that the senator testified about the government collected sensitive data about using illegal methods . <eos>
+The newspaper said that despite the hot weather the neighbors sold a convertible to last month . <eos>
+Our neighbor said that despite her busy schedule the student sent a package to over a week ago . <eos>
+My friend told me that the consultant assumes the university hired a new administrator to help with for the following year . <eos>
+She can not believe that despite his strong morals my good friend stole a candy bar from when he was young . <eos>
+Our neighbor reminded us that despite the flood the tow truck hauled the wagon out of last spring . <eos>
+The shop owner told me that the baker forgot the restaurant prepared a new recipe for yesterday evening . <eos>
+My sister told me that despite protest the newspaper published a scandalous story about last month . <eos>
+We remember that despite habit our new friend brought a large present to last weekend . <eos>
+I know who my brother said our aunt devoured the cake in front of the guests at the holiday party . <eos>
+My neighbor told me who the fireman believes the dog caught the cat in full view of the neighbors yesterday . <eos>
+I know who despite setbacks the committee delivered the report to the president by the deadline . <eos>
+You remember who despite protocol the businessman showed the presentation to the visitors after lunch . <eos>
+She told me who the teacher suspects the star student stole answers to the test from the history teacher last semester . <eos>
+She knows what the expert can tell the collector forged the painting with the help of a new technology a short while ago . <eos>
+We all remember what the politician said the convict smuggled a gun into the prison two weeks ago . <eos>
+My friend reported who despite the strong economy the company will sell multiple assets to benefit stock holders over the subsequent quarter . <eos>
+I do not know what the actor suspects her rival sabotaged the audition with a cruel plan last week . <eos>
+She can guess what our friend predicts the movie star will be awarded an oscar for her hard work during the award ceremony . <eos>
+The newspaper reported what despite the lack of evidence the suspect killed the witness with a knife in the middle of the night . <eos>
+We recall what despite best practice the chef placed a wooden spoon next to the oven over an hour ago . <eos>
+I remember who the doctor decided the nurse should administer the new medicine to the sick patient without any delay . <eos>
+Our friend guessed who despite public outcry the gossip column revealed family secrets to the whole town yesterday . <eos>
+The mayor told me who the town clerk heard the town repaired the parking lot with the help of an anonymous doner over the summer . <eos>
+My friend remembers what the senator testified about the government collected sensitive data about foreign threats using illegal methods . <eos>
+The newspaper said who despite the hot weather the neighbors sold a convertible to the new couple last month . <eos>
+Our neighbor said who despite her busy schedule the student sent a package to her mother over a week ago . <eos>
+My friend told me what the consultant assumes the university hired a new administrator to help with increased enrollment for the following year . <eos>
+She can not believe what despite his strong morals my good friend stole a candy bar from the pharmacy when he was young . <eos>
+Our neighbor reminded us what despite the flood the tow truck hauled the wagon out of the ditch last spring . <eos>
+The shop owner told me who the baker forgot the restaurant prepared a new recipe for their favorite guests yesterday evening . <eos>
+My sister told me who despite protest the newspaper published a scandalous story about the mayor last month . <eos>
+We remember what despite habit our new friend brought a large present to the birthday party last weekend . <eos>
+I know who my brother said our aunt devoured the cake in front of at the holiday party . <eos>
+My neighbor told me who the fireman believes the dog caught the cat in full view of yesterday . <eos>
+I know who despite setbacks the committee delivered the report to by the deadline . <eos>
+You remember who despite protocol the businessman showed the presentation to after lunch . <eos>
+She told me who the teacher suspects the star student stole answers to the test from last semester . <eos>
+She knows what the expert can tell the collector forged the painting with the help of a short while ago . <eos>
+We all remember what the politician said the convict smuggled a gun into two weeks ago . <eos>
+My friend reported who despite the strong economy the company will sell multiple assets to benefit over the subsequent quarter . <eos>
+I do not know what the actor suspects her rival sabotaged the audition with last week . <eos>
+She can guess what our friend predicts the movie star will be awarded an oscar for during the award ceremony . <eos>
+The newspaper reported what despite the lack of evidence the suspect killed the witness with in the middle of the night . <eos>
+We recall what despite best practice the chef placed a wooden spoon next to over an hour ago . <eos>
+I remember who the doctor decided the nurse should administer the new medicine to without any delay . <eos>
+Our friend guessed who despite public outcry the gossip column revealed family secrets to yesterday . <eos>
+The mayor told me who the town clerk heard the town repaired the parking lot with the help of over the summer . <eos>
+My friend remembers what the senator testified about the government collected sensitive data about using illegal methods . <eos>
+The newspaper said who despite the hot weather the neighbors sold a convertible to last month . <eos>
+Our neighbor said who despite her busy schedule the student sent a package to over a week ago . <eos>
+My friend told me what the consultant assumes the university hired a new administrator to help with for the following year . <eos>
+She can not believe what despite his strong morals my good friend stole a candy bar from when he was young . <eos>
+Our neighbor reminded us what despite the flood the tow truck hauled the wagon out of last spring . <eos>
+The shop owner told me who the baker forgot the restaurant prepared a new recipe for yesterday evening . <eos>
+My sister told me who despite protest the newspaper published a scandalous story about last month . <eos>
+We remember what despite habit our new friend brought a large present to last weekend . <eos>
