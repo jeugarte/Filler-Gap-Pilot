@@ -26,12 +26,9 @@ FINAL_TOKENS = {"<eos>", "</S>", "</s>"}
 }"""
 
 # For running on Jenova
-MODELS = {
-    'google': [
-        "python ~/code/lm_1b/lm_1b/eval_test_google.py --pbtxt ~/code/lm_1b/data/graph-2016-09-10.pbtxt --ckpt '../../../code/lm_1b/data/ckpt-*' --vocab_file ~/code/lm_1b/data/vocab-2016-09-10.txt --output_file {output_path} --input_file {input_path}",
-    ],
-    'gpt3': [
-        "python ~/src/colorlessgreenRNNs/src/language_models/evaluate_target_word_test.py --checkpoint ~/src/colorlessgreenRNNs/src/hidden650_batch128_dropout0.2_lr20.0.pt --surprisalmode True --data ~/src/colorlessgreenRNNs/data/lm/English --prefixfile {input_path} --outf {output_path}",
+MODEL = {
+    'gpt2': [
+        "python ~/cs4745/pilot/Filler-Gap-Pilot/eval_gpt2.py --surprisalmode True --prefixfile {input_path} --outf {output_path}",
     ]
 }
 
@@ -68,7 +65,7 @@ def do_system_calls(cmds):
 def run_model(model_name, input_path, output_path):
     return do_system_calls(
         cmd.format(input_path=input_path, output_path=output_path)
-        for cmd in MODELS[model_name]
+        for cmd in MODEL[model_name]
     )
 
 def sentences(words):
@@ -99,7 +96,7 @@ def run_models(path, conditions_df, models):
         for model in models:
             output_filename = os.path.join(path, "%s_output.tsv" % model)
             print(output_filename)
-            #run_model(model, input_filename, output_filename)
+            run_model(model, input_filename, output_filename)
             output_df = pd.read_csv(
                 os.path.join(output_filename),
                 sep="\t",
@@ -108,24 +105,17 @@ def run_models(path, conditions_df, models):
                 names=['model_word', 'surprisal']
             )
             output_df['model'] = model
-            yield pd.concat([conditions_df, output_df], axis=1)
+            yield output_df
 
     # Combine results with conditions
-    df = functools.reduce(pd.DataFrame.append, output_dfs())
+    df = pd.concat(list(output_dfs()), ignore_index=True)
 
-    # Do some checking
-    assert df.shape == (conditions_df.shape[0] * len(models), conditions_df.shape[1] + 3)
-    df['unk'] = df['model_word'].map(is_unk)
-    df['final'] = df['model_word'].map(is_final)
-    print(df[(df['model_word'] != df['word']) & ~df['unk'] & ~df['final']])
-    assert ((df['model_word'] == df['word']) | df['unk'] | df['final']).all()
-    
     return df
 
 
 def main(path, *models):
     if not models:
-        models = MODELS
+        models = MODEL
     path = os.path.abspath(path)
     # Read in the data
     conditions_df = pd.read_csv(
@@ -133,7 +123,7 @@ def main(path, *models):
         sep="\t",
     )
     df = run_models(path, conditions_df, models)
-    df.to_csv(os.path.join(path, "combined_results.csv"))
+    df.to_csv(os.path.join(path, "combined_results2.csv"))
 
 if __name__ == "__main__":
     main(*sys.argv[1:])
