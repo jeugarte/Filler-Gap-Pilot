@@ -86,10 +86,10 @@ def is_final(w):
 
 def run_models(path, conditions_df, models):
     # Write sentences to a txt file to be fed to the LSTMs
-    input_filename = os.path.join(path, "input.txt")
-    with open(input_filename, 'wt') as outfile:
-        for sentence in sentences(conditions_df['word']):
-            print(sentence, file=outfile)
+    input_filename = os.path.join(path, "input_obj.txt")
+    # with open(input_filename, 'wt') as outfile:
+    #     for sentence in sentences(conditions_df['word']):
+    #         print(sentence, file=outfile)
             
     # Run the LSTMs by command line invocation
     def output_dfs():
